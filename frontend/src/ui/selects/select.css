@@ -1,0 +1,11 @@
+select {
+    width: 235x;
+    height: 43px;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 10px;
+    border: none;
+    background-color: #fff;
+    padding: 13px 26px 14px 26px
+}
+
