@@ -1,0 +1,33 @@
+.sidebar{
+    width: 337px;
+    height: 100%;
+    font-size: 18px;
+}
+
+.sidebar_content{
+    width: 227px;
+    margin: 90px 60px 0px 50px;
+}
+
+.sidebar_logo{
+    text-align: center;
+}
+
+.sidebar_menu-icon{
+    margin-right: 42px;
+}
+
+.sidebar_menu{
+    margin-top: 90px;
+}
+
+.sidebar_menu-item{
+    display: flex;
+    width: 100%;
+    color: #08092B;
+}
+
+.sidebar_menu-item + .sidebar_menu-item{
+    margin-top: 49px;
+}
+

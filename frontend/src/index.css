@@ -1,12 +1,30 @@
+@font-face {
+    font-family: 'Gotham Pro';
+    src: local('GothamPro'),
+    url('./fonts/GothamPro.ttf') format('truetype');
+}
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
 body{
-  background-color: black;
+    height: inherit;
+    font-family: 'Gotham Pro', sans-serif;
+    background-color: #F3F7FF;
 }
 
-* {
-  margin: 0;
-  padding: 0;
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 
-.text_grey{
-  color: #08092B;
+.link{
+    text-decoration: none;
+    color: inherit;
 }
+

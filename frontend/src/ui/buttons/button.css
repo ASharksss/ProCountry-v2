@@ -1,0 +1,12 @@
+.button  {
+    background: linear-gradient(323.34deg, #12D3C1 -0.11%, #0841BB 71.84%);
+    border-radius: 10px;
+}
+
+.large {
+    width: 250px;
+}
+
+.middle {
+    width: 169px;
+}
