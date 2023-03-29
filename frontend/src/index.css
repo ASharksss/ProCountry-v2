@@ -1,7 +1,13 @@
 @font-face {
-    font-family: 'Gotham Pro';
-    src: local('GothamPro'),
-    url('./fonts/GothamPro.ttf') format('truetype');
+    font-family: 'Montserrat-Regular';
+    src: local('Montserrat-Regular'),
+    url('./fonts/Montserrat-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: local('Montserrat-SemiBold'),
+    url('./fonts/Montserrat-SemiBold.ttf') format('truetype');
 }
 
 html {
@@ -11,7 +17,7 @@ html {
 
 body{
     height: inherit;
-    font-family: 'Gotham Pro', sans-serif;
+    font-family: 'Montserrat-Regular', sans-serif;
     background-color: #F3F7FF;
 }
 
@@ -28,3 +34,6 @@ body{
     color: inherit;
 }
 
+.wrapper{
+    display: flex;
+}

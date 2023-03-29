@@ -1,11 +1,11 @@
 select {
-    width: 235px;
-    height: 43px;
+    width: 287px;
+    height: 60px;
     font-size: 16px;
     font-weight: 400;
     border-radius: 10px;
     border: none;
     background-color: #fff;
-    padding: 12px 26px 13px 26px
+    padding: 12px 26px 13px 26px;
 }
 

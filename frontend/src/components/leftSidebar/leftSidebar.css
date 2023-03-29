@@ -1,11 +1,11 @@
-.sidebar{
+.left-sidebar{
     width: 337px;
     height: 100%;
     font-size: 18px;
 }
 
 .sidebar_content{
-    width: 227px;
+    width: 234px;
     margin: 90px 60px 0px 50px;
 }
 

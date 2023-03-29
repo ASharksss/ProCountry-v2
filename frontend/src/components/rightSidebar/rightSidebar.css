@@ -1,0 +1,28 @@
+.right-sidebar{
+    width: 403px;
+    margin-left: 20px;
+    font-family: 'Montserrat-SemiBold';
+}
+
+.user_block{
+    display: flex;
+    align-items: center;
+    margin-top: 55px;
+    cursor: pointer;
+}
+
+.user_img{
+    margin-right: 18px;
+}
+
+.user_scroll-down{
+    margin-left: 17px;
+}
+
+.sidebar_geo-nav{
+    margin-top: 75px;
+}
+
+.sidebar_select + .sidebar_select{
+    margin-top: 59px;
+}
