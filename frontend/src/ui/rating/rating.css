@@ -1,3 +1,11 @@
 .rating{
     display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.rating_count{
+    margin-left: 11px;
 }

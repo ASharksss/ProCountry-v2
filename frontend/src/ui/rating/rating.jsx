@@ -6,7 +6,7 @@ export const Rating = () => {
   return (
     <div className='rating'>
       <img src={rating} alt=""/>
-      <p className='count'>98.23%</p>
+      <p className='rating_count'>96.21%</p>
     </div>
   );
 };

@@ -1,7 +1,39 @@
-.leader_info{
-    display: flex;
+.leader {
+    padding: 5px;
+    width: 686px;
+    height: 317px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 4px 30px rgba(9, 75, 157, 0.1);
 }
 
-.leader_info-dop{
+.leader_info {
     display: flex;
+    margin: 50px 50px 25px 50px;
+}
+
+.leader_info-dop {
+    display: flex;
+    align-items: center;
+}
+
+.leader_info-name{
+    margin-left: 42px;
+}
+
+.leader_info-fullName{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.leader_info-job{
+    font-size: 18px;
+    color: #08092B;
+    opacity: 0.5;
+    margin-bottom: 40px;
+}
+
+.leader-rating{
+    margin-right: 50px;
 }
