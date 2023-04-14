@@ -9,7 +9,7 @@ export const LeaderCard = () => {
     <div className='leader'>
       <div className="leader_info">
         <div className="leader_info-img">
-          <img src={leader_avatar} alt=""/>
+          <img src={leader_avatar} alt="" className='leader_img'/>
         </div>
         <div className="leader_info-name">
           <p className='leader_info-fullName'>Имя Фамилия Отчетсво</p>
@@ -24,7 +24,6 @@ export const LeaderCard = () => {
           </div>
         </div>
       </div>
-  
     </div>
   );
 };

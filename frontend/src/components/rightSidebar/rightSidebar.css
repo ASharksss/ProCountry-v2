@@ -1,4 +1,7 @@
 .right-sidebar{
+    position: fixed;
+    top: 0px;
+    right: 0px;
     width: 403px;
     margin-left: 20px;
     font-family: 'Montserrat-SemiBold';

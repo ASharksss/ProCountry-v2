@@ -1,4 +1,4 @@
-.rating{
+.rating {
     display: flex;
     justify-content: flex-end;
     width: 100%;
@@ -6,6 +6,20 @@
     font-weight: 600;
 }
 
-.rating_count{
+.rating_count {
     margin-left: 11px;
+}
+
+
+@media (max-width: 1640px) {
+    .rating {
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        justify-content: flex-end;
+    }
+
+    .rating_img {
+        width: 16px;
+    }
 }

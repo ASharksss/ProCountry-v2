@@ -10,6 +10,12 @@
     url('./fonts/Montserrat-SemiBold.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: local('Montserrat-Bold'),
+    url('./fonts/Montserrat-Bold.ttf') format('truetype');
+}
+
 html {
     box-sizing: border-box;
     height: 100%;

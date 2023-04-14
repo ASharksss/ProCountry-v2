@@ -1,0 +1,14 @@
+.title{
+    margin: 162px 0 88px 0;
+    font-family: Montserrat-Bold;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.home_leaderMap{
+    display: flex;   
+}
+
+.home_leader{
+    margin-right: 20px;
+}

@@ -1,7 +1,10 @@
 import './index.css'
 import {Layout} from "./pages/Layout";
-import {BrowserRouter, Route, Router, Routes} from "react-router-dom";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {LeaderCard} from "./components/leaderCard/leaderCard";
+import Map from "./components/map/map";
+import {Home} from "./pages/home/home";
+
 
 function App() {
   return (
@@ -9,12 +12,11 @@ function App() {
       <div className="App">
         <Routes>
           <Route path='/' element={<Layout/>}>
-            <Route path='/' element={<LeaderCard/>}/>
+            <Route path='/' element={<Home/>}/>
           </Route>
         </Routes>
       </div>
     </BrowserRouter>
-
   );
 }
 

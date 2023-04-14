@@ -1,11 +1,13 @@
 .leader {
     padding: 5px;
     width: 686px;
-    height: 317px;
+    height: 327px;
     background-color: #fff;
     border-radius: 20px;
     box-shadow: 0px 4px 30px rgba(9, 75, 157, 0.1);
 }
+
+
 
 .leader_info {
     display: flex;
@@ -16,6 +18,12 @@
     display: flex;
     align-items: center;
 }
+
+.leader_img{
+    width: 142px;
+    height: 142px;
+}
+
 
 .leader_info-name{
     margin-left: 42px;
@@ -35,5 +43,29 @@
 }
 
 .leader-rating{
-    margin-right: 50px;
+    margin-right: 30px;
+}
+
+@media (max-width: 1860px) {
+    .leader{
+        width: 600px;
+        height: 300px;
+    }
+
+    .leader_info{
+        margin: 30px 30px 20px 30px;
+    }
+
+    .leader_info-fullName{
+        font-size: 18px;
+    }
+
+    .leader_info-job{
+        font-size: 14px;
+    }
+
+    .leader_img{
+        width: 122px;
+        height: 122px;
+    }
 }
