@@ -1,14 +1,27 @@
-.title{
+.categories{
+    width: 1145px;
+}
+.title {
     margin: 162px 0 88px 0;
     font-family: Montserrat-Bold;
     font-size: 40px;
     font-weight: 700;
 }
 
-.home_leaderMap{
-    display: flex;   
+.home_leaderMap {
+    display: flex;
 }
 
-.home_leader{
+.home_leader {
     margin-right: 20px;
+}
+
+.categories {
+    width: 87px;
+}
+
+.category_item {
+    display: flex;
+    width: 1145px;
+    border: 1px solid black;
 }
