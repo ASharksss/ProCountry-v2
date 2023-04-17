@@ -3,6 +3,7 @@ import './home.css'
 import {LeaderCard} from "../../components/leaderCard/leaderCard";
 import Map from "../../components/map/map";
 import CategoryCard from "../../components/categoryCard/categoryCard";
+import DaughterSubjects from "../../components/DaughterSubjects/daughterSubjects";
 
 export const Home = () => {
   return (
@@ -16,6 +17,7 @@ export const Home = () => {
           <Map/>
         </div>
       </div>
+      <h1 className='cat_title'>Категории учреждений</h1>
       <div className="categories">
         <div className="category_item">
           <CategoryCard text={'Образование'}/>
@@ -33,6 +35,32 @@ export const Home = () => {
           <CategoryCard text={'МЧС'}/>
         </div>
         <CategoryCard text={'Благоустройство города'} classname={'large'}/>
+      </div>
+      <h1 className='cat_title'>Дочерние субъекты</h1>
+      <div className="daughterSubjects">
+        <div className="category_item">
+          <CategoryCard text={'Район 1'}/>
+          <CategoryCard text={'Район 2'}/>
+          <CategoryCard text={'Район 3'}/>
+        </div>
+        <div className="category_item">
+          <CategoryCard text={'Район 4'}/>
+          <CategoryCard text={'Район 5'}/>
+          <CategoryCard text={'Район 6'}/>
+        </div>
+      </div>
+      <h1 className='cat_title'>Партии</h1>
+      <div className="daughterSubjects">
+        <div className="category_item">
+          <CategoryCard text={'Партия 1'}/>
+          <CategoryCard text={'Партия 2'}/>
+          <CategoryCard text={'Партия 3'}/>
+        </div>
+        <div className="category_item">
+          <CategoryCard text={'Партия 4'}/>
+          <CategoryCard text={'Партия 5'}/>
+          <CategoryCard text={'Партия 6'}/>
+        </div>
       </div>
 
     </div>

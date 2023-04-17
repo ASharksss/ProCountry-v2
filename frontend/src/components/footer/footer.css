@@ -1,0 +1,32 @@
+.footer{
+    display: flex;
+    font-size: 18px;
+    height: 279px;
+    margin-top: 87px;
+}
+
+.footer_logo{
+    width: 62px;
+    height: 66px;
+    margin-right: 120px;
+    align-self: center;
+}
+
+.footer_wrapper{
+    width: 963px;
+    height: 123px;
+    display: flex;
+    justify-content: space-between;
+    margin: 42px auto;
+}
+
+
+.footer_link{
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+.footer_link + .footer_link{
+    margin-top: 31px;
+}

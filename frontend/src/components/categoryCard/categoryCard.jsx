@@ -7,6 +7,7 @@ const CategoryCard = ({text, classname}) => {
     <div className={'category_card ' + classname}>
       <div className="category_card_content">
         <p className='category_name'>{text}</p>
+        <CategoryRating/>
       </div>
     </div>
   );

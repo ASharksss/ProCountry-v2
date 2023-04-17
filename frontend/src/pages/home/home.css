@@ -23,5 +23,11 @@
 .category_item {
     display: flex;
     width: 1145px;
-    border: 1px solid black;
+}
+
+.cat_title{
+    margin-top: 130px;
+    margin-bottom: 42px;
+    font-family: Montserrat-Bold;
+    font-size: 40px;
 }
