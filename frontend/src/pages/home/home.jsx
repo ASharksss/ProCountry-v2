@@ -56,13 +56,13 @@ export const Home = () => {
       <h1 className='cat_title'>Партии</h1>
       <div className="daughterSubjects">
         <div className="category_item">
-          <NavLink to='/partPage' className='noLink category_card_link'><CategoryCard text={'Партия 1'}/></NavLink>
-          <NavLink to='/partPage' className='noLink category_card_link'><CategoryCard text={'Партия 2'}/></NavLink>
-          <NavLink to='/partPage' className='noLink category_card_link'><CategoryCard text={'Партия 3'}/></NavLink>
+          <NavLink to='/parts/partPage' className='noLink category_card_link'><CategoryCard text={'Партия 1'}/></NavLink>
+          <NavLink to='/parts/partPage' className='noLink category_card_link'><CategoryCard text={'Партия 2'}/></NavLink>
+          <NavLink to='/parts/partPage' className='noLink category_card_link'><CategoryCard text={'Партия 3'}/></NavLink>
         </div>
         <div className="category_item">
-          <NavLink to='/partPage' className='noLink category_card_link'><CategoryCard text={'Партия 4'}/></NavLink>
-          <NavLink to='/partPage' className='noLink category_card_link'><CategoryCard text={'Партия 5'}/></NavLink>
+          <NavLink to='/parts/partPage' className='noLink category_card_link'><CategoryCard text={'Партия 4'}/></NavLink>
+          <NavLink to='/parts/partPage' className='noLink category_card_link'><CategoryCard text={'Партия 5'}/></NavLink>
           <NavLink  className='noLink category_card_link'><CategoryCard text={'Партия 6'}/></NavLink>
         </div>
         <NavLink to='/parts'><button>Смотреть все</button></NavLink>

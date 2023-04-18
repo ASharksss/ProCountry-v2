@@ -12,19 +12,19 @@ const InstitutePage = ({institute_title}) => {
       <h1 className='institute_subtitle'>Учреждения</h1>
       <div className="categories">
         <div className="category_item">
-          <NavLink to='/institutePage' className='noLink category_card_link'><InstituteCard text={'Школы'}/></NavLink>
-          <NavLink to='/institutePage' className='noLink category_card_link'><InstituteCard text={'Детские сады'}/></NavLink>
-          <NavLink to='/institutePage' className='noLink category_card_link'><InstituteCard text={'Университеты'}/></NavLink>
+          <NavLink to='/institute' className='noLink category_card_link'><InstituteCard text={'Школы'}/></NavLink>
+          <NavLink to='/institute' className='noLink category_card_link'><InstituteCard text={'Детские сады'}/></NavLink>
+          <NavLink to='/institute' className='noLink category_card_link'><InstituteCard text={'Университеты'}/></NavLink>
         </div>
         <div className="category_item">
-          <NavLink to='/institutePage' className='noLink category_card_link'><InstituteCard text={'Академии'}/></NavLink>
-          <NavLink to='/institutePage' className='noLink category_card_link'><InstituteCard text={'Техникумы'}/></NavLink>
-          <NavLink to='/institutePage' className='noLink category_card_link'><InstituteCard text={'Колледжи'}/></NavLink>
+          <NavLink to='/institute' className='noLink category_card_link'><InstituteCard text={'Академии'}/></NavLink>
+          <NavLink to='/institute' className='noLink category_card_link'><InstituteCard text={'Техникумы'}/></NavLink>
+          <NavLink to='/institute' className='noLink category_card_link'><InstituteCard text={'Колледжи'}/></NavLink>
         </div>
         <div className="category_item">
-          <NavLink to='/institutePage' className='noLink category_card_link'><InstituteCard text={'специальные учебно-воспитательные организации'}/></NavLink>
-          <NavLink to='/institutePage' className='noLink category_card_link'><InstituteCard text={'Инетрнаты'}/></NavLink>
-          <NavLink to='/institutePage' className='noLink category_card_link'><InstituteCard text={'Другое'}/></NavLink>
+          <NavLink to='/institute' className='noLink category_card_link'><InstituteCard text={'специальные учебно-воспитательные организации'}/></NavLink>
+          <NavLink to='/institute' className='noLink category_card_link'><InstituteCard text={'Инетрнаты'}/></NavLink>
+          <NavLink to='/institute' className='noLink category_card_link'><InstituteCard text={'Другое'}/></NavLink>
         </div>
       </div>
     </div>
