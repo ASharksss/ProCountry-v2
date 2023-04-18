@@ -1,0 +1,32 @@
+.institute_card{
+    vertical-align: center;
+    width: 364px;
+    height: 230px;
+    background-color: white;
+    box-shadow: 0px 4px 30px rgba(9, 75, 157, 0.1);
+    border-radius: 20px;
+    margin-right: 24px;
+    color: #08092B;
+    cursor: pointer;
+    text-align: left;
+    padding: 104px 35px;
+}
+
+.institute_card:hover{
+    color: #000;
+    box-shadow: 0px 20px 50px rgba(9, 54, 111, 0.37);
+    transition: .3s;
+}
+
+
+.institute_card:hover .institute_name{
+    opacity: 1;
+}
+
+.institute_name{
+    font-family: Montserrat-SemiBold;
+    font-size: 20px;
+    font-weight: 500;
+    opacity: 0.5;
+    align-self: normal;
+}

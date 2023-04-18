@@ -31,3 +31,9 @@
     font-family: Montserrat-Bold;
     font-size: 40px;
 }
+
+.category_card_link {
+    display: block;
+    margin-top: 24px;
+}
+

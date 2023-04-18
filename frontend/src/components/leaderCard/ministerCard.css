@@ -1,0 +1,30 @@
+.minister_card{
+    margin-top: 88px;
+    margin-bottom: 130px;
+    padding: 5px;
+    width: 1140px;
+    height: 306px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 4px 30px rgba(9, 75, 157, 0.1);
+}
+
+.minister_img{
+    width: 214px;
+    height: 214px;
+}
+
+.minister_info {
+    margin: 46px 50px;
+    display: flex;
+}
+
+.minister_info-fullName{
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.minister_info-name{
+    margin-left: 42px;
+}
