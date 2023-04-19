@@ -6,6 +6,7 @@ import TablePage from "./pages/tablePage/tablePage";
 import InstitutePage from "./pages/institutePage/institutePage";
 import PartPage from "./pages/partPage/partPage";
 import PartPersonPage from "./pages/partPersonPage/PartPersonPage";
+import Notifications from "./pages/notifications/notifications";
 
 
 function App() {
@@ -15,12 +16,16 @@ function App() {
         <Routes>
           <Route path='/' element={<Layout/>}>
             <Route path='/' element={<Home/>}/>
-            <Route path='/institute' element={<TablePage title={'Школы'} path={'/institute/institutePage'}/>}/>
-            <Route path='/institutePage' element={<InstitutePage institute_title={'Название категории'}/>}/>
+            <Route path='/institutes' element={<TablePage title={'Школы'} path={'/institute/institutePage'}/>}/>
+            <Route path='/institutes/institutePage' element={<InstitutePage institute_title={'Название категории'}/>}/>
             <Route path='/subjects' element={<TablePage path={'/subjects/subjectPage'} title={'Дочерние субъекты'} subtitle={'Дочерние субъекты выбранной территории'}/>}/>
             <Route path='/parts' element={<TablePage path={'/parts/partPage'} title={'Партии'} subtitle={'Зарегистрированные политические партии выбранной территории'}/>}/>
             <Route path='/parts/partPage' element={<PartPage text={'Название Партии'}/>}/>
-            <Route path='/parts/partPage/partPerson' element={<PartPersonPage text={'Название Партии'}/>}/>
+            <Route path='/parts/partPage/partPerson' element={< PartPersonPage text={'Название Партии'}/>}/>
+
+
+
+            <Route path='/notifications' element={<Notifications/>}/>
           </Route>
         </Routes>
       </div>

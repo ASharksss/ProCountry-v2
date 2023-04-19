@@ -1,0 +1,14 @@
+.notifications{
+    width: 1140px;
+}
+
+.notifications_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.notifications_btn{
+    font-size: 18px;
+    border-bottom: 1px solid black;
+}

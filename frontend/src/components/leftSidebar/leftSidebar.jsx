@@ -28,10 +28,10 @@ export const LeftSidebar = () => {
             <img src={part} alt="" className="sidebar_menu-icon"/>
             <p>Партии</p>
           </a>
-          <a href='frontend/src/components/leftSidebar/leftSidebar#' className='link sidebar_menu-item'>
+          <NavLink to='/notifications' className='link sidebar_menu-item'>
             <img src={notice} alt="" className="sidebar_menu-icon"/>
             <p>Уведомления</p>
-          </a>
+          </NavLink>
           <a href='frontend/src/components/leftSidebar/leftSidebar#' className='link sidebar_menu-item'>
             <img src={subscribtion} alt="" className="sidebar_menu-icon"/>
             <p>Подписки</p>

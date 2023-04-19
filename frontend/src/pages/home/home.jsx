@@ -20,22 +20,21 @@ export const Home = () => {
       <h1 className='cat_title'>Категории учреждений</h1>
       <div className="categories">
         <div className="category_item">
-          <NavLink to='/institutePage' className='noLink category_card_link'><CategoryCard text={'Образование'}/></NavLink>
-          <NavLink to='/institutePage' className='noLink category_card_link'><CategoryCard text={'Здравоохранение'}/></NavLink>
-          <NavLink to='/institutePage' className='noLink category_card_link'><CategoryCard text={'Транспорт'}/></NavLink>
+          <NavLink to='/institutes/institutePage' className='noLink category_card_link'><CategoryCard text={'Образование'}/></NavLink>
+          <NavLink to='/institutes/institutePage' className='noLink category_card_link'><CategoryCard text={'Здравоохранение'}/></NavLink>
+          <NavLink to='/institutes/institutePage' className='noLink category_card_link'><CategoryCard text={'Транспорт'}/></NavLink>
         </div>
         <div className="category_item">
-          <NavLink to='/institutePage' className='noLink category_card_link'><CategoryCard text={'Культура'}/></NavLink>
-          <NavLink to='/institutePage' className='noLink category_card_link'><CategoryCard text={'Охрана порядка'}/></NavLink>
-          <NavLink to='/institutePage' className='noLink category_card_link'><CategoryCard text={'Природа'}/></NavLink>
+          <NavLink to='/institutes/institutePage' className='noLink category_card_link'><CategoryCard text={'Культура'}/></NavLink>
+          <NavLink to='/institutes/institutePage' className='noLink category_card_link'><CategoryCard text={'Охрана порядка'}/></NavLink>
+          <NavLink to='/institutes/institutePage' className='noLink category_card_link'><CategoryCard text={'Природа'}/></NavLink>
         </div>
         <div className="category_item">
-          <NavLink to='/institutePage' className='noLink category_card_link'><CategoryCard text={'Социальное обеспечение'}/></NavLink>
-          <NavLink to='/institutePage' className='noLink category_card_link'><CategoryCard text={'Физкультура и спорт'}/></NavLink>
-          <NavLink to='/institutePage' className='noLink category_card_link'><CategoryCard text={'МЧС'}/></NavLink>
+          <NavLink to='/institutes/institutePage' className='noLink category_card_link'><CategoryCard text={'Социальное обеспечение'}/></NavLink>
+          <NavLink to='/institutes/institutePage' className='noLink category_card_link'><CategoryCard text={'Физкультура и спорт'}/></NavLink>
+          <NavLink to='/institutes/institutePage' className='noLink category_card_link'><CategoryCard text={'МЧС'}/></NavLink>
         </div>
-        <NavLink to='/institutePage' className='noLink category_card_link'><CategoryCard text={'Благоустройство города'} classname={'large'}/></NavLink>
-        <NavLink to='/institute'><button>Смотреть все</button></NavLink>
+        <NavLink to='/institutes/institutePage' className='noLink category_card_link'><CategoryCard text={'Благоустройство города'} classname={'large'}/></NavLink>
       </div>
 
       <h1 className='cat_title'>Дочерние субъекты</h1>
