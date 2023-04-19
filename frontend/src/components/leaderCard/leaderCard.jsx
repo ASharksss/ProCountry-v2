@@ -16,7 +16,7 @@ export const LeaderCard = () => {
           <p className='leader_info-job'>Должность</p>
           <div className="leader_info-dop">
             <div className="leader-rating">
-              <Rating/>
+              <Rating size={'min'}/>
             </div>
             <div>
               <Part/>

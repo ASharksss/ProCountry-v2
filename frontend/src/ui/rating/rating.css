@@ -1,13 +1,27 @@
 .rating {
+    font-family: Montserrat-SemiBold;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    font-size: 23px;
-    font-weight: 600;
+    align-items: flex-end;
 }
 
-.rating_count {
-    margin-left: 11px;
+.rating_img {
+    width: 18px;
+    height: 24px;
+}
+
+.max {
+    width: 36px;
+    height: 48px;
+    font-size: 43px;
+    margin-left: 18px;
+    line-height: 52px;
+}
+
+.min {
+    width: 18px;
+    height: 24px;
+    font-size: 23px;
+    margin-left: 10px;
 }
 
 

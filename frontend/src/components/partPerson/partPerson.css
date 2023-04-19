@@ -1,4 +1,4 @@
-.partPerson{
+.partPerson {
     display: flex;
     width: 1140px;
     height: 306px;
@@ -6,11 +6,12 @@
     border-radius: 20px;
     padding: 46px 52px 46px 50px;
 }
-.partPerson-info_name{
+
+.partPerson-info_name {
     display: flex;
     justify-content: space-between;
 }
 
-.partPerson_name{
+.partPerson_name {
     font-size: 32px;
 }

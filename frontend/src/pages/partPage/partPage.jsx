@@ -7,13 +7,13 @@ const PartPage = ({text}) => {
     <div className='partPage'>
       <div className="part_header">
         <h1 className='part_name'>{text}</h1>
-        <Rating/>
+        <Rating  size={'max'}/>
       </div>
       <div className="bread_crumb">
         тут хлебные крошки
       </div>
       <h1>Члены политической партии</h1>
-      <PartPerson/>
+      <PartPerson />
     </div>
   );
 };

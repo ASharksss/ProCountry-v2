@@ -14,7 +14,7 @@ const PartPerson = () => {
       <div className="partPerson-info">
         <div className="partPerson-info_name">
           <h1 className='partPerson_name'>Фамилия Имя Отчетсво</h1>
-          <Rating size={'min'}/>
+          <Rating size={'min'} />
         </div>
         <p>Мэр города Казани, председатель партии,
           член Федерального политического комитета,член
