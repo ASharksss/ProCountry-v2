@@ -1,0 +1,34 @@
+
+.partPersonPage_header {
+    display: flex;
+}
+
+.back_btn {
+    margin-top: 175px;
+}
+
+.bio_card {
+    background-color: white;
+    width: 1140px;
+    border-radius: 20px;
+    padding: 46px 52px 60px 50px;
+    margin-top: 50px;
+}
+
+.partPerson_bio {
+    width: 702px;
+    margin-left: 264px;
+}
+
+.bio_title {
+    font-family: Montserrat-SemiBold;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.bio_p{
+    margin-bottom: 30px;
+    font-size: 18px;
+    opacity: 0.5;
+    line-height: 139.2%;
+}

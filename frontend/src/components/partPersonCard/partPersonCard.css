@@ -1,0 +1,52 @@
+.partPerson {
+    display: flex;
+    width: 1140px;
+    height: 306px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 46px 52px 46px 50px;
+    margin-bottom: 30px;
+}
+
+.partPerson-info {
+    margin-left: 42px;
+}
+
+.partPerson-info_name {
+    width: 784px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 26px;
+    cursor: pointer;
+}
+
+.partPerson_job {
+    width: 566px;
+    font-size: 18px;
+    color: #08092B;
+    opacity: 0.5;
+    margin-bottom: 50px;
+}
+
+.partPerson_rating {
+    margin-right: 52px;
+}
+
+.partPerson_name {
+    font-size: 32px;
+}
+
+.partPerson_avatar-img {
+    width: 214px;
+    height: 214px;
+}
+
+.partPerson_link {
+    font-size: 20px;
+    color: #08092B;
+}
+
+.partPerson_link:hover {
+   color: #6e6b6b;
+}

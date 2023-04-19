@@ -1,0 +1,26 @@
+.part_header{
+    width: 1140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 150px;
+
+}
+
+.part_name{
+    font-family: Montserrat-Bold;
+    font-size: 58px;
+    margin-bottom: 26px;
+}
+
+.partPage_title{
+    font-weight: normal;
+    font-size: 24px;
+    opacity: 0.5;
+    margin-bottom: 32px;
+    margin-top: 74px;
+}
+
+.part_rating{
+    margin-right: 86px;
+}

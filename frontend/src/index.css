@@ -45,12 +45,13 @@ body{
 }
 
 .container{
-    width: 1440px;
+    width: 1920px;
     margin: 0 auto;
 }
 
 .noLink{
     text-decoration: none;
+    color: #08092B;
 }
 
 .bold{
@@ -75,4 +76,10 @@ body{
 
 .color-black{
     color: black;
+}
+
+.noBtn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }

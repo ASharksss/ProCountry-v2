@@ -1,11 +1,11 @@
 import React from 'react';
-import './partPerson.css'
+import './partPersonCard.css'
 import leader_avatar from '../../asserts/icons/home/leader_avatar.png'
 import {Rating} from "../../ui/rating/rating";
 import {NavLink} from "react-router-dom";
 
 
-const PartPerson = () => {
+const PartPersonCard = () => {
   return (
     <div className='partPerson'>
       <div className="partPerson_avatar">
@@ -14,16 +14,19 @@ const PartPerson = () => {
       <div className="partPerson-info">
         <div className="partPerson-info_name">
           <h1 className='partPerson_name'>Фамилия Имя Отчетсво</h1>
-          <Rating size={'min'} />
+          <div className="partPerson_rating">
+            <Rating size={'min'} />
+          </div>
+
         </div>
-        <p>Мэр города Казани, председатель партии,
+        <p className='partPerson_job'>Мэр города Казани, председатель партии,
           член Федерального политического комитета,член
           Бюро партии, руководитель Единого избирательного штаба партии</p>
-        <NavLink to='/parts/partPage/partPerson'>Узнать подробнее</NavLink>
+        <NavLink to='/parts/partPage/partPerson' className='partPerson_link'>Узнать подробнее</NavLink>
       </div>
 
     </div>
   );
 };
 
-export default PartPerson;
+export default PartPersonCard;

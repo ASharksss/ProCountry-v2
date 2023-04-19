@@ -5,6 +5,7 @@ import {Home} from "./pages/home/home";
 import TablePage from "./pages/tablePage/tablePage";
 import InstitutePage from "./pages/institutePage/institutePage";
 import PartPage from "./pages/partPage/partPage";
+import PartPersonPage from "./pages/partPersonPage/PartPersonPage";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path='/subjects' element={<TablePage path={'/subjects/subjectPage'} title={'Дочерние субъекты'} subtitle={'Дочерние субъекты выбранной территории'}/>}/>
             <Route path='/parts' element={<TablePage path={'/parts/partPage'} title={'Партии'} subtitle={'Зарегистрированные политические партии выбранной территории'}/>}/>
             <Route path='/parts/partPage' element={<PartPage text={'Название Партии'}/>}/>
+            <Route path='/parts/partPage/partPerson' element={<PartPersonPage text={'Название Партии'}/>}/>
           </Route>
         </Routes>
       </div>

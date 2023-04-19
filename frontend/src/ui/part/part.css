@@ -1,7 +1,7 @@
 .part {
     display: flex;
     align-items: flex-end;
-    width: 182px;
+    width: 100%;
 }
 
 .part p {
