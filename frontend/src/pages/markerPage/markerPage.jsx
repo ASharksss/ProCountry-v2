@@ -1,6 +1,7 @@
 import React from 'react';
 import './markerPage.css'
 import MarkerCard from "../../components/markerCard/markerCard";
+import Nothing from "../../components/nothing/Nothing";
 
 const MarkerPage = () => {
     return (
@@ -12,6 +13,9 @@ const MarkerPage = () => {
                 <MarkerCard/>
                 <MarkerCard/>
                 <MarkerCard/>
+
+
+                <Nothing/>
             </div>
         </div>
     );

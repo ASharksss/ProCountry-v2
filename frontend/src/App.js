@@ -8,6 +8,7 @@ import PartPage from "./pages/partPage/partPage";
 import PartPersonPage from "./pages/partPersonPage/PartPersonPage";
 import SubscriptionsPage from "./pages/subscriptionsPage/SubscriptionsPage";
 import MarkerPage from "./pages/markerPage/markerPage";
+import SupportPage from "./pages/SupportPage/SupportPage";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <Route path='/Subscriptions' element={<SubscriptionsPage/>}/>
             <Route path='/MarkerPage' element={<MarkerPage/>}/>
             <Route path='/MarkerPage' element={<MarkerPage/>}/>
+            <Route path='/support' element={<SupportPage/>}/>
 
           </Route>
         </Routes>

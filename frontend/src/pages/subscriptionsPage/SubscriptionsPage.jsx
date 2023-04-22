@@ -1,6 +1,7 @@
 import React from 'react';
 import './subscriptionsPage.css'
 import SubscriptionCard from "../../components/subscriptionCard/SubscriptionCard";
+import Nothing from "../../components/nothing/Nothing";
 
 const SubscriptionsPage = () => {
     return (
@@ -12,6 +13,8 @@ const SubscriptionsPage = () => {
                 <SubscriptionCard/>
                 <SubscriptionCard/>
                 <SubscriptionCard/>
+
+                <Nothing/>
             </div>
         </div>
     );

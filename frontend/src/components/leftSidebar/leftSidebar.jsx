@@ -44,10 +44,10 @@ export const LeftSidebar = () => {
             <img src={heart} alt="" className="sidebar_menu-icon"/>
             <p>Мне понравилось</p>
           </a>
-          <a href='frontend/src/components/leftSidebar/leftSidebar#' className='link sidebar_menu-item'>
+          <NavLink to='/support' className='link sidebar_menu-item'>
             <img src={support} alt="" className="sidebar_menu-icon"/>
             <p>Поддержка</p>
-          </a>
+          </NavLink>
         </div>
       </div>
     </div>
