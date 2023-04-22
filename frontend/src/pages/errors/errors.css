@@ -1,0 +1,19 @@
+.errors_title {
+    font-size: 206px;
+    color: #08092B;
+    margin-bottom: 21px;
+}
+
+.errors_subtitle {
+    font-size: 24px;
+    color: #08092B;
+}
+
+.errors {
+    font-family: Montserrat-Bold;
+    width: 1140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
