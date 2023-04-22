@@ -18,22 +18,22 @@ const Table = ({path}) => {
           <tr className='table_row'>
             <td className='bold align-left'><NavLink to={path} className='solid noLink color-black'>Текст</NavLink></td>
             <td className='align-center'>Иванов Иван Иванович</td>
-            <td className='align-right'><Rating/></td>
+            <td className='align-right td_rating'><Rating size={'min'}/></td>
           </tr>
           <tr className='table_row'>
             <td className='bold align-left'><NavLink to={path} className='solid noLink color-black'>Текст</NavLink></td>
             <td className='align-center'>Иванов Иван Иванович</td>
-            <td className='align-right'><Rating/></td>
+            <td className='align-right td_rating'><Rating size={'min'}/></td>
           </tr>
           <tr className='table_row'>
             <td className='bold align-left'><NavLink to={path} className='solid noLink color-black'>Текст</NavLink></td>
             <td className='align-center'>Иванов Иван Иванович</td>
-            <td className='align-right'><Rating/></td>
+            <td className='align-right td_rating'><Rating size={'min'}/></td>
           </tr>
           <tr className='table_row'>
             <td className='bold align-left'><NavLink to={path} className='solid noLink color-black'>Текст</NavLink></td>
             <td className='align-center'>Иванов Иван Иванович</td>
-            <td className='align-right'><Rating/></td>
+            <td className='align-right td_rating'><Rating size={'min'}/></td>
           </tr>
         </tbody>
       </table>

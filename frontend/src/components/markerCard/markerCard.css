@@ -1,0 +1,53 @@
+.markerCard {
+    width: 1140px;
+    background-color: white;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    padding: 46px 50px 50px 50px;
+}
+
+.markerCard_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.markerCard_header-title {
+    font-family: Montserrat-Bold;
+    color: #08092B;
+    font-size: 32px;
+    border-bottom: 1px solid black;
+}
+
+.markerCard_body {
+    display: flex;
+}
+
+.markerCard_body-user_avatar {
+    width: 90px;
+    height: 90px;
+    margin-right: 40px;
+}
+
+.markerCard_body-text {
+    margin-top: 22px;
+}
+
+.markerCard_body-text_name {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.markerCard_body-text_date, .markerCard_body-text_review {
+    font-size: 18px;
+    opacity: 0.5;
+}
+
+.markerCard_body-text_date {
+    margin-bottom: 25px;
+}
+
+.markerCard_body-text_review {
+    width: 635px;
+}

@@ -6,6 +6,8 @@ import TablePage from "./pages/tablePage/tablePage";
 import InstitutePage from "./pages/institutePage/institutePage";
 import PartPage from "./pages/partPage/partPage";
 import PartPersonPage from "./pages/partPersonPage/PartPersonPage";
+import SubscriptionsPage from "./pages/subscriptionsPage/SubscriptionsPage";
+import MarkerPage from "./pages/markerPage/markerPage";
 
 
 function App() {
@@ -21,6 +23,10 @@ function App() {
             <Route path='/parts' element={<TablePage path={'/parts/partPage'} title={'Партии'} subtitle={'Зарегистрированные политические партии выбранной территории'}/>}/>
             <Route path='/parts/partPage' element={<PartPage text={'Название Партии'}/>}/>
             <Route path='/parts/partPage/partPerson' element={<PartPersonPage text={'Название Партии'}/>}/>
+            <Route path='/Subscriptions' element={<SubscriptionsPage/>}/>
+            <Route path='/MarkerPage' element={<MarkerPage/>}/>
+            <Route path='/MarkerPage' element={<MarkerPage/>}/>
+
           </Route>
         </Routes>
       </div>
