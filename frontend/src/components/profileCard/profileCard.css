@@ -1,0 +1,19 @@
+.profileCard {
+    text-align: center;
+    width: 1140px;
+    background-color: white;
+    border-radius: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.profileCard_avatar {
+    width: 214px;
+    height: 214px;
+    margin-bottom: 42px;
+}
+
+.profileCard_username {
+    font-family: Montserrat-Bold;
+    font-size: 32px;
+}

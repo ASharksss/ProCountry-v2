@@ -1,0 +1,12 @@
+.myProfilePage_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 150px;
+    margin-bottom: 60px;
+}
+
+.myProfilePage_header-title {
+    font-size: 58px;
+    font-family: Montserrat-Bold;
+}
