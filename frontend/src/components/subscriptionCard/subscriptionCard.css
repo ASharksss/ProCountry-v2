@@ -1,0 +1,61 @@
+.subscriptionCard {
+    width: 1140px;
+    background-color: white;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    padding: 46px 46px 50px 46px;
+    box-shadow: 0px 4px 30px rgba(9, 75, 157, 0.1);
+}
+
+.subscriptionCard_leader_info {
+    width: 873px;
+}
+
+.subscriptionCard_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.subscriptionCard_header h1 {
+    border-bottom: 1px solid black;
+    font-size: 32px;
+}
+
+.leader_info-header h2{
+    margin-bottom: 15px;
+}
+
+.leader_info-header p{
+    opacity: 0.5;
+}
+
+.subscriptionCard_leader_avatar {
+    width: 135px;
+    height: 135px;
+    margin-right: 32px;
+}
+
+.subscriptionCard_leader {
+    display: flex;
+}
+
+.subscriptionCard_rating {
+    margin-right: 55px;
+}
+
+.leader_info-footer {
+    display: flex;
+    margin-top: 50px;
+}
+
+.leader_info-footer-address {
+    width: 165px;
+    margin-left: 30px;
+    margin-right: 154px;
+    opacity: 0.5;
+}
+
+.subscriptionCard_text {
+}

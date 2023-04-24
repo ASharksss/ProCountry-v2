@@ -1,0 +1,14 @@
+.subscriptions_title {
+    font-family: Montserrat-Bold;
+    font-size: 58px;
+    color: #08092B;
+    margin-bottom: 26px;
+    margin-top: 150px;
+}
+
+.subscriptions_subtitle {
+    font-size: 24px;
+    opacity: 0.5;
+    font-weight: normal;
+    margin-bottom: 74px;
+}

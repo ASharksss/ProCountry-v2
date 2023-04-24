@@ -1,0 +1,24 @@
+.supportPage_header-title {
+    font-size: 58px;
+    color: #08092B;
+    margin-top: 150px;
+    font-family: Montserrat-Bold;
+    margin-bottom: 26px;
+}
+
+.supportPage_header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.supportPage_header-top button {
+    margin-top: 150px;
+}
+
+.supportPage_header-subtitle {
+    font-size: 24px;
+    opacity: 0.5;
+    margin-bottom: 74px;
+    font-weight: normal;
+}

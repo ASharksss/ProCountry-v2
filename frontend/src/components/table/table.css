@@ -28,6 +28,13 @@ td {
     border-bottom: 1px solid #D8D8D8;
 }
 
+.td_rating {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 47px;
+}
+
 .cell_rating {
     display: flex;
     justify-content: center;
