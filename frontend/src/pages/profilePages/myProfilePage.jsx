@@ -1,6 +1,9 @@
 import React from 'react';
 import './profiles.css'
 import ProfileCard from "../../components/profileCard/profileCard";
+import ProfileReviewBlock from "../../components/profileReview/profileReviewBlock";
+import {NavLink} from "react-router-dom";
+import ProfileCardEdit from "../../components/profileCard/profileCardEdit";
 
 const MyProfilePage = () => {
   return (
@@ -11,6 +14,11 @@ const MyProfilePage = () => {
       </div>
 
       <ProfileCard/>
+      {/*<ProfileCardEdit/>*/}
+      <ProfileReviewBlock/>
+      <NavLink to='/allReview' className='allReview'>
+        <button>Смотреть все</button>
+      </NavLink>
     </div>
   );
 };

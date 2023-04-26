@@ -84,3 +84,7 @@ body{
     border: none;
     cursor: pointer;
 }
+
+.row {
+    display: flex;
+}

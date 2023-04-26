@@ -5,6 +5,7 @@
     margin-bottom: 30px;
     box-shadow: 0px 4px 30px rgba(9, 75, 157, 0.1);
     padding: 46px 50px 50px 50px;
+
 }
 
 .markerCard_header {
@@ -33,6 +34,7 @@
 
 .markerCard_body-text {
     margin-top: 22px;
+
 }
 
 .markerCard_body-text_name {
@@ -47,8 +49,10 @@
 
 .markerCard_body-text_date {
     margin-bottom: 25px;
+    opacity: 0.3;
 }
 
 .markerCard_body-text_review {
     width: 635px;
+    line-height: 139.2%;
 }
