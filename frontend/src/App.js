@@ -1,6 +1,6 @@
 import './index.css'
-import {Layout} from "./pages/Layout";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {Layout} from "./pages/Layout/Layout";
+import {BrowserRouter, Form, Route, Routes} from "react-router-dom";
 import {Home} from "./pages/home/home";
 import TablePage from "./pages/tablePage/tablePage";
 import InstitutePage from "./pages/institutePage/institutePage";
@@ -13,6 +13,11 @@ import Error400 from "./pages/errors/Error400";
 import Error500 from "./pages/errors/Error500";
 import Notifications from "./pages/notifications/notifications";
 import MyProfilePage from "./pages/profilePages/myProfilePage";
+import ProfileReviewBlock from "./components/profileReview/profileReviewBlock";
+import ReviewsPage from "./pages/ReviewsPage/ReviewsPage";
+import LayoutEmptiness from "./pages/Layout/LayoutEmptiness";
+import FormComponent from './components/form/formLogin'
+import FormRegistration from "./components/form/formRegistration";
 
 
 function App() {
@@ -35,12 +40,14 @@ function App() {
             <Route path='/MarkerPage' element={<MarkerPage/>}/>
             <Route path='/support' element={<SupportPage/>}/>
             <Route path='/myProfile' element={<MyProfilePage/>}/>
-
-
-
+            <Route path='/allReviews' element={<ReviewsPage/>}/>
 
             <Route path='/404' element={<Error400/>}/>
             <Route path='/500' element={<Error500/>}/>
+          </Route>
+          <Route path='/form' element={<LayoutEmptiness/>}>
+            <Route path='login' element={<FormComponent form_title={'Вход'}/>}/>
+            <Route path='registration' element={<FormRegistration form_title={'Регистрация'}/>}/>
           </Route>
         </Routes>
       </div>

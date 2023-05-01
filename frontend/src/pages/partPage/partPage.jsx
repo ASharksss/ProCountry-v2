@@ -8,7 +8,7 @@ const PartPage = ({text}) => {
     <div className='partPage'>
       <div className="part_header">
         <h1 className='part_name'>{text}</h1>
-        <div className="part_rating">
+        <div>
           <Rating  size={'max'}/>
         </div>
 

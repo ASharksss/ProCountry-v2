@@ -50,6 +50,14 @@ body{
     margin: 0 auto;
 }
 
+.flex {
+    display: flex;
+}
+
+.jstfy-center {
+    justify-content: center;
+}
+
 .noLink{
     text-decoration: none;
     color: #08092B;
@@ -87,4 +95,17 @@ body{
 
 .row {
     display: flex;
+}
+
+.mr-50px {
+    margin-right: 50px ;
+}
+
+.mb-25px {
+    margin-bottom: 25px;
+}
+
+
+.mt-150px {
+    margin-top: 150px;
 }

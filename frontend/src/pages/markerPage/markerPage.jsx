@@ -15,7 +15,7 @@ const MarkerPage = () => {
                 <MarkerCard/>
 
 
-                <Nothing/>
+                <Nothing text={'Пока ничего нет'}/>
             </div>
         </div>
     );

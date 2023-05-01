@@ -1,11 +1,11 @@
 import React from 'react';
 import './nothing.css'
 
-const Nothing = () => {
+const Nothing = ({text}) => {
     return (
         <div className='nothing'>
             <p className='nothing_text'>
-                Пока ничего нет
+              {text}
             </p>
         </div>
     );

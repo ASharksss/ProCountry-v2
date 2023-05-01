@@ -18,3 +18,16 @@
     font-family: Montserrat-Bold;
     font-size: 32px;
 }
+
+.profileCardEdit_input {
+    margin-top: 45px;
+}
+
+
+.profileCardEdit_buttons {
+    margin-top: 50px;
+}
+
+.profileCardEdit_button + .profileCardEdit_button {
+    margin-left: 50px;
+}

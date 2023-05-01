@@ -14,7 +14,7 @@ const SubscriptionsPage = () => {
                 <SubscriptionCard/>
                 <SubscriptionCard/>
 
-                <Nothing/>
+                <Nothing text={"Пока ничего нет"}/>
             </div>
         </div>
     );
