@@ -18,6 +18,7 @@ import ReviewsPage from "./pages/ReviewsPage/ReviewsPage";
 import LayoutEmptiness from "./pages/Layout/LayoutEmptiness";
 import FormComponent from './components/form/formLogin'
 import FormRegistration from "./components/form/formRegistration";
+import FormBid from "./components/form/formBid";
 
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
           <Route path='/form' element={<LayoutEmptiness/>}>
             <Route path='login' element={<FormComponent form_title={'Вход'}/>}/>
             <Route path='registration' element={<FormRegistration form_title={'Регистрация'}/>}/>
+            <Route path='bid' element={<FormBid form_title={'Заявка учреждения'}/>}/>
           </Route>
         </Routes>
       </div>
