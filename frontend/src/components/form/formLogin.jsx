@@ -13,6 +13,10 @@ const FormComponent = ({form_title}) => {
         <div className="form_input">
           <Input input_label={'Пароль'} size={'large'} input_placeholder={'Пароль'}/>
         </div>
+        <div className='checkbox_block'>
+          <input type="checkbox" className='checkbox'/>
+          <label>Scales</label>
+        </div>
         <div className="row form_links">
           <button className='noBtn form_link'>
             <p className='solid form_link'>Забыли пароль?</p>

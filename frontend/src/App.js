@@ -19,6 +19,7 @@ import LayoutEmptiness from "./pages/Layout/LayoutEmptiness";
 import FormComponent from './components/form/formLogin'
 import FormRegistration from "./components/form/formRegistration";
 import FormBid from "./components/form/formBid";
+import InstitutionPage from "./pages/institutionPage/institutionPage";
 
 
 function App() {
@@ -30,6 +31,8 @@ function App() {
             <Route path='/' element={<Home/>}/>
             <Route path='/institutes' element={<TablePage title={'Школы'}/>}/>
             <Route path='/institutes/institutePage' element={<InstitutePage institute_title={'Название категории'}/>}/>
+            <Route path='/institutionPage' element={<InstitutionPage/>}/>
+
             <Route path='/subjects' element={<TablePage path={'/subjects/subjectPage'} title={'Дочерние субъекты'}
                                                         subtitle={'Дочерние субъекты выбранной территории'}/>}/>
             <Route path='/parts' element={<TablePage path={'/parts/partPage'} title={'Партии'}
