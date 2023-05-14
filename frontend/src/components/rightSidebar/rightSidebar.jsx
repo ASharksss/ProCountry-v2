@@ -3,7 +3,7 @@ import user_avatar from './../../asserts/icons/sidebars/user_avatar.png'
 import scroll_down from './../../asserts/icons/sidebars/scroll_down.svg'
 import './rightSidebar.css'
 import {Search} from "../../ui/search/search";
-import {Select} from "../../ui/selects/search";
+import {Select} from "../../ui/selects/select";
 
 
 export const RightSidebar = () => {

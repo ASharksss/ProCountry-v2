@@ -9,6 +9,17 @@
     box-shadow: 0px 4px 30px rgba(9, 75, 157, 0.1);
 }
 
+.formRecoveryPassword{
+    text-align: center;
+    padding: 115px 95px;
+    width: 568px;
+    height: 556px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 211px auto;
+    box-shadow: 0px 4px 30px rgba(9, 75, 157, 0.1);
+}
+
 .reg_row + .reg_row{
     margin-top: 20px;
 }
@@ -17,6 +28,11 @@
     margin-bottom: 39px;
     font-size: 35px;
     font-family: Montserrat-Bold;
+}
+
+.form_subtitle{
+    opacity: 0.5;
+    margin-bottom: 20px;
 }
 
 .form_input {
@@ -37,6 +53,7 @@
 .form_links {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 

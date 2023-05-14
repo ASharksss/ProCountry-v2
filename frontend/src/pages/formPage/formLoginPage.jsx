@@ -1,8 +1,10 @@
 import React from 'react';
 import './form.css'
 import Input from "../../ui/input/input";
+import InputPassword from "../../ui/input/inputPassword";
+import Checkbox from "../../ui/checkbox/checkbox";
 
-const FormComponent = ({form_title}) => {
+const FormLoginPage = ({form_title}) => {
   return (
     <div className='form'>
       <div>
@@ -11,11 +13,10 @@ const FormComponent = ({form_title}) => {
           <Input input_label={'Логин'} size={'large'} input_placeholder={'Почта'}/>
         </div>
         <div className="form_input">
-          <Input input_label={'Пароль'} size={'large'} input_placeholder={'Пароль'}/>
+          <InputPassword input_label={'Пароль'} size={'large'} input_placeholder={'Пароль'}/>
         </div>
         <div className='checkbox_block'>
-          <input type="checkbox" className='checkbox'/>
-          <label>Scales</label>
+          <Checkbox checkbox_text={'Запомнить меня'}/>
         </div>
         <div className="row form_links">
           <button className='noBtn form_link'>
@@ -32,4 +33,4 @@ const FormComponent = ({form_title}) => {
   );
 };
 
-export default FormComponent;
+export default FormLoginPage;

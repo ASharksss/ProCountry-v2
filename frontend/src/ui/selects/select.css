@@ -1,4 +1,4 @@
-select {
+.geoSelect {
     width: 287px;
     height: 60px;
     font-size: 16px;
@@ -7,5 +7,15 @@ select {
     border: none;
     background-color: #fff;
     padding: 12px 26px 13px 26px;
+}
+
+.formSelect {
+    width: 258px;
+    height: 55px;
+    background: #F3F7FF;
+    font-size: 12px;
+    border: 1px solid #D8D8D8;
+    border-radius: 10px;
+    padding: 18px 30px 18px 30px;
 }
 

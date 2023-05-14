@@ -7,7 +7,7 @@ export const Select = () => {
 
   return (
     <>
-      <select className='text_grey'>
+      <select className='text_grey geoSelect'>
         <option>
           <span >
             Выбор субъекта...

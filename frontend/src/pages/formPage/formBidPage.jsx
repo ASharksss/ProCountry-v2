@@ -1,7 +1,10 @@
 import React from 'react';
+import InputRequired from "../../ui/input/inputRequired";
 import Input from "../../ui/input/input";
+import {Select} from "../../ui/selects/select";
+import FormSelects from "../../ui/selects/formSelects";
 
-const FormBid = ({form_title}) => {
+const FormBidPage = ({form_title}) => {
   return (
     <div className='formBid'>
       <div className="reg_form">
@@ -16,10 +19,10 @@ const FormBid = ({form_title}) => {
         </div>
         <div className="row reg_row">
           <div className="reg_input">
-            <Input size={'small'} input_label={'Город'} input_placeholder={'Город'}/>
+            <FormSelects select_name={'Город'}/>
           </div>
           <div className="reg_input">
-            <Input size={'small'} input_label={'Учреждение'} input_placeholder={'Учреждение'}/>
+            <FormSelects select_name={'Учреждение'}/>
           </div>
         </div>
         <div className="row reg_row">
@@ -36,4 +39,4 @@ const FormBid = ({form_title}) => {
   );
 };
 
-export default FormBid;
+export default FormBidPage;

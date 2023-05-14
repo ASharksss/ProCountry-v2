@@ -110,4 +110,11 @@ body{
     margin-top: 150px;
 }
 
+input{
+    outline: none;
+}
+
+.space-between {
+    justify-content: space-between;
+}
 

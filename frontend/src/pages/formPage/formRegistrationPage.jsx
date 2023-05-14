@@ -1,7 +1,9 @@
 import React from 'react';
+import InputRequired from "../../ui/input/inputRequired";
 import Input from "../../ui/input/input";
+import InputPassword from "../../ui/input/inputPassword";
 
-const FormRegistration = ({form_title}) => {
+const FormRegistrationPage = ({form_title}) => {
   return (
     <div className='reg_form'>
       <h1 className='form_title'>{form_title}</h1>
@@ -18,7 +20,7 @@ const FormRegistration = ({form_title}) => {
           <Input size={'small'} input_label={'Логин'} input_placeholder={'Логин'}/>
         </div>
         <div className="reg_input">
-          <Input size={'small'} input_label={'Пароль'} input_placeholder={'Пароль'}/>
+          <InputPassword size={'small'} input_label={'Пароль'} input_placeholder={'Пароль'}/>
         </div>
       </div>
       <div className="row reg_row">
@@ -40,4 +42,4 @@ const FormRegistration = ({form_title}) => {
   );
 };
 
-export default FormRegistration;
+export default FormRegistrationPage;

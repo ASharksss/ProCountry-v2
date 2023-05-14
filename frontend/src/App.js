@@ -13,13 +13,14 @@ import Error400 from "./pages/errors/Error400";
 import Error500 from "./pages/errors/Error500";
 import Notifications from "./pages/notifications/notifications";
 import MyProfilePage from "./pages/profilePages/myProfilePage";
-import ProfileReviewBlock from "./components/profileReview/profileReviewBlock";
 import ReviewsPage from "./pages/ReviewsPage/ReviewsPage";
 import LayoutEmptiness from "./pages/Layout/LayoutEmptiness";
-import FormComponent from './components/form/formLogin'
-import FormRegistration from "./components/form/formRegistration";
-import FormBid from "./components/form/formBid";
 import InstitutionPage from "./pages/institutionPage/institutionPage";
+import FormLoginPage from "./pages/formPage/formLoginPage";
+import FormRegistrationPage from "./pages/formPage/formRegistrationPage";
+import FormBidPage from "./pages/formPage/formBidPage";
+import RecoveryEmailPage from "./pages/formPage/recoveryPassword/recoveryEmailPage";
+import RecoveryCodePage from "./pages/formPage/recoveryPassword/recoveryCodePage";
 
 
 function App() {
@@ -50,9 +51,11 @@ function App() {
             <Route path='/500' element={<Error500/>}/>
           </Route>
           <Route path='/form' element={<LayoutEmptiness/>}>
-            <Route path='login' element={<FormComponent form_title={'Вход'}/>}/>
-            <Route path='registration' element={<FormRegistration form_title={'Регистрация'}/>}/>
-            <Route path='bid' element={<FormBid form_title={'Заявка учреждения'}/>}/>
+            <Route path='login' element={<FormLoginPage form_title={'Вход'}/>}/>
+            <Route path='registration' element={<FormRegistrationPage form_title={'Регистрация'}/>}/>
+            <Route path='bid' element={<FormBidPage form_title={'Заявка учреждения'}/>}/>
+            <Route path='recoveryPassword/email' element={<RecoveryEmailPage form_title={'Забыли пароль?'}/>}/>
+            <Route path='recoveryPassword/code' element={<RecoveryCodePage form_title={'Введите код'}/>}/>
           </Route>
         </Routes>
       </div>

@@ -1,0 +1,48 @@
+.checkbox_container{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox {
+    display: none;
+}
+
+.checkbox_fake {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 3px;
+    position: relative;
+    transition: .4s;
+}
+.checkbox_fake::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 8px;
+    display: block;
+    background-image: url("../../asserts/icons/galka.svg");
+    opacity: 0;
+    transition: .4s;
+}
+
+.checkbox:checked + .checkbox_fake::before {
+    opacity: 1;
+
+}
+
+.checkbox:checked + .checkbox_fake {
+    background: linear-gradient(323.34deg, #12D3C1 -0.11%, #0841BB 71.84%);
+    border: none;
+}
+
+.checkbox_text {
+    margin-left: 20px;
+    font-size: 18px;
+    opacity: 0.5;
+}
