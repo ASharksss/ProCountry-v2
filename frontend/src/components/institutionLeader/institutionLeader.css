@@ -1,0 +1,82 @@
+.institutionLeader {
+    width: 1140px;
+    height: 1135px;
+    background-color: white;
+    padding: 46px 108px 60px 50px;
+}
+
+.institutionLeader_info-top {
+    width: 717px;
+    margin-left: 42px;
+}
+
+.info_title {
+    font-size: 32px;
+    margin-bottom: 15px;
+    font-family: Montserrat-SemiBold;
+}
+
+.info_job {
+    font-size: 18px;
+    opacity: 0.5;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.institutionLeader_info_img {
+    width: 214px;
+    height: 214px;
+}
+
+.institutionLeader_education {
+    width: 726px;
+    margin-left: 257px;
+    margin-top: -29px;
+    margin-bottom: 50px;
+}
+
+.institutionLeader_education-title{
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.institutionLeader_education-item, .institutionLeader_education-info{
+    font-size: 18px;
+}
+
+.institutionLeader_education-item {
+    width: 330px;
+    font-weight: bold;
+}
+
+.institutionLeader_education-info {
+    width: 350px;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+}
+
+.icon_answer {
+    margin-left: 42px;
+}
+
+.institutionLeader_awards {
+    margin-left: 257px;
+    margin-bottom: 50px;
+    width: 688px;
+}
+
+.institutionLeader_award-item {
+    font-size: 18px;
+    font-weight: 400;
+    opacity: 0.5;
+    color: #08092B;
+}
+
+.institutionLeader_award-item + .institutionLeader_award-item {
+    margin-top: 6px;
+}
+
+.institutionLeader_social-media {
+    margin-left: 257px;
+}

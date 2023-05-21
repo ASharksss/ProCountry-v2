@@ -117,7 +117,18 @@ input{
 .space-between {
     justify-content: space-between;
 }
+
+.items-center{
+    align-items: center;
+}
+
 .bold {
     font-weight: bold;
+}
+
+.card {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 30px rgba(9, 75, 157, 0.1);
+    border-radius: 20px;
 }
 
