@@ -1,4 +1,5 @@
 import React from 'react';
+import '../form.css'
 import Input from "../../../ui/input/input";
 
 const RecoveryCodePage = ({form_title}) => {
@@ -13,7 +14,7 @@ const RecoveryCodePage = ({form_title}) => {
 				<Input size={'extra-small'}/>
 			</div>
 			<div className="send_again row">
-				<p className='send_again-text'>Отправить еще раз</p>
+				<p className='send_again-text solid'>Отправить еще раз</p>
 				<p className='send_again-timer'>1:03</p>
 			</div>
 			<button>Подтвердить</button>

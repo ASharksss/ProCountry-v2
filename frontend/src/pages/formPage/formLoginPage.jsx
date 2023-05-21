@@ -13,7 +13,7 @@ const FormLoginPage = ({form_title}) => {
           <Input input_label={'Логин'} size={'large'} input_placeholder={'Почта'}/>
         </div>
         <div className="form_input">
-          <InputPassword input_label={'Пароль'} size={'large'} input_placeholder={'Пароль'}/>
+          <InputPassword input_label={'Пароль'} state={'usually'} size={'large'} input_placeholder={'Пароль'}/>
         </div>
         <div className='checkbox_block'>
           <Checkbox checkbox_text={'Запомнить меня'}/>

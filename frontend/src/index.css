@@ -117,4 +117,7 @@ input{
 .space-between {
     justify-content: space-between;
 }
+.bold {
+    font-weight: bold;
+}
 

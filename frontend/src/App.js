@@ -1,6 +1,6 @@
 import './index.css'
 import {Layout} from "./pages/Layout/Layout";
-import {BrowserRouter, Form, Route, Routes} from "react-router-dom";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {Home} from "./pages/home/home";
 import TablePage from "./pages/tablePage/tablePage";
 import InstitutePage from "./pages/institutePage/institutePage";
@@ -21,6 +21,8 @@ import FormRegistrationPage from "./pages/formPage/formRegistrationPage";
 import FormBidPage from "./pages/formPage/formBidPage";
 import RecoveryEmailPage from "./pages/formPage/recoveryPassword/recoveryEmailPage";
 import RecoveryCodePage from "./pages/formPage/recoveryPassword/recoveryCodePage";
+import RecoveryNewPassword from "./pages/formPage/recoveryPassword/recoveryNewPassword";
+import FormReviewPage from "./pages/formPage/formReviewPage";
 
 
 function App() {
@@ -49,13 +51,16 @@ function App() {
 
             <Route path='/404' element={<Error400/>}/>
             <Route path='/500' element={<Error500/>}/>
+
           </Route>
           <Route path='/form' element={<LayoutEmptiness/>}>
             <Route path='login' element={<FormLoginPage form_title={'Вход'}/>}/>
             <Route path='registration' element={<FormRegistrationPage form_title={'Регистрация'}/>}/>
             <Route path='bid' element={<FormBidPage form_title={'Заявка учреждения'}/>}/>
+            <Route path='review' element={<FormReviewPage form_title={'Отзыв'}/>}/>
             <Route path='recoveryPassword/email' element={<RecoveryEmailPage form_title={'Забыли пароль?'}/>}/>
             <Route path='recoveryPassword/code' element={<RecoveryCodePage form_title={'Введите код'}/>}/>
+            <Route path='recoveryPassword/newPassword' element={<RecoveryNewPassword form_title={'Новый пароль'}/>}/>
           </Route>
         </Routes>
       </div>

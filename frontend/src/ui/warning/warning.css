@@ -1,0 +1,10 @@
+.warningText {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.warning_text {
+    color: #E03737;
+    margin-left: 15px;
+}

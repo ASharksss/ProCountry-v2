@@ -20,7 +20,7 @@ const FormRegistrationPage = ({form_title}) => {
           <Input size={'small'} input_label={'Логин'} input_placeholder={'Логин'}/>
         </div>
         <div className="reg_input">
-          <InputPassword size={'small'} input_label={'Пароль'} input_placeholder={'Пароль'}/>
+          <InputPassword size={'small'} input_label={'Пароль'}  state={'usually'} input_placeholder={'Пароль'}/>
         </div>
       </div>
       <div className="row reg_row">

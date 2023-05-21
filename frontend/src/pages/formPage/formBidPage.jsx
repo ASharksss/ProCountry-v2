@@ -1,7 +1,5 @@
 import React from 'react';
-import InputRequired from "../../ui/input/inputRequired";
 import Input from "../../ui/input/input";
-import {Select} from "../../ui/selects/select";
 import FormSelects from "../../ui/selects/formSelects";
 
 const FormBidPage = ({form_title}) => {
@@ -19,9 +17,11 @@ const FormBidPage = ({form_title}) => {
         </div>
         <div className="row reg_row">
           <div className="reg_input">
+            <label className='reg_select_label'>Город</label>
             <FormSelects select_name={'Город'}/>
           </div>
           <div className="reg_input">
+            <label className='reg_select_label'>Учреждение</label>
             <FormSelects select_name={'Учреждение'}/>
           </div>
         </div>

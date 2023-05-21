@@ -20,8 +20,81 @@
     box-shadow: 0px 4px 30px rgba(9, 75, 157, 0.1);
 }
 
+.formRecoveryNewPassword {
+    text-align: center;
+    padding: 115px 95px;
+    width: 568px;
+    height: 670px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 211px auto;
+    box-shadow: 0px 4px 30px rgba(9, 75, 157, 0.1);
+}
+
+.formReview {
+    text-align: center;
+    padding: 115px 95px;
+    width: 722px;
+    height: 1101px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 211px auto;
+    box-shadow: 0px 4px 30px rgba(9, 75, 157, 0.1);
+}
+
+.review_textarea-block {
+    margin-top: 30px;
+}
+
+.formReview_subtitle {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.review_textarea-subtitle {
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 6px;
+}
+
+.review_textarea {
+    width: 532px;
+    height: 187px;
+    background: #F3F7FF;
+    border: 1px solid #D8D8D8;
+    border-radius: 10px;
+    resize: none;
+    padding: 20px 30px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.formReview_uploadFile-title {
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 6px;
+}
+
+.formReview_footer {
+    width: 351px;
+    height: 60px;
+    font-size: 14px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    opacity: 0.5;
+}
+
 .reg_row + .reg_row{
     margin-top: 20px;
+}
+
+.reg_select_label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 6px;
 }
 
 .form_title {
@@ -33,6 +106,7 @@
 .form_subtitle{
     opacity: 0.5;
     margin-bottom: 20px;
+    margin-top: -19px;
 }
 
 .form_input {
@@ -81,4 +155,23 @@
     font-weight: normal;
     font-size: 16px;
 }
+
+.send_again {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.send_again-text {
+    margin-right: 20px;
+    color: #08092B;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.send_again-timer {
+    font-size: 18px;
+    opacity: 0.5;
+    color: #08092B;
+}
+
 
