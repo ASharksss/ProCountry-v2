@@ -1,6 +1,7 @@
 import React from 'react';
 import './institutionPage.css'
 import InstitutionLeader from "../../components/institutionLeader/institutionLeader";
+import InstitutionInfo from "../../components/institutionInfo/institutionInfo";
 
 const InstitutionPage = () => {
   return (
@@ -38,6 +39,7 @@ const InstitutionPage = () => {
         </div>
       </div> v1*/}
       <InstitutionLeader/>
+      <InstitutionInfo/>
     </div>
   );
 };
