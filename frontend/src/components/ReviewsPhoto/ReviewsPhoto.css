@@ -1,0 +1,35 @@
+.reviewsPhoto {
+    margin-top: 130px;
+}
+
+.reviewsPhoto_header-title {
+    color: #08092B;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Montserrat-Bold';
+    margin-bottom: 26px;
+}
+
+.reviewsPhoto_header-subtitle {
+    font-weight: normal;
+    margin-bottom: 35px;
+    font-size: 24px;
+    color: #08092B;
+    opacity: 0.5;
+}
+
+
+.reviewsPhoto_imgBlock {
+    width: 173px;
+    height: 174px;
+    border-radius: 10px;
+    margin-right: 20px;
+    box-sizing: border-box;
+}
+
+
+.reviewsPhoto_block {
+/*    overflow-x: scroll;*/
+    margin-bottom: 74px;
+}
+

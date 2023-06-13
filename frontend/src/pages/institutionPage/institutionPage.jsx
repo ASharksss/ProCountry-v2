@@ -2,6 +2,7 @@ import React from 'react';
 import './institutionPage.css'
 import InstitutionLeader from "../../components/institutionLeader/institutionLeader";
 import InstitutionInfo from "../../components/institutionInfo/institutionInfo";
+import ReviewsPhoto from "../../components/ReviewsPhoto/ReviewsPhoto";
 
 const InstitutionPage = () => {
   return (
@@ -17,6 +18,8 @@ const InstitutionPage = () => {
           </div>
         </div>
       </div>
+
+
      {/* <div className="institutionPage_header">
         <div className="row space-between">
           <h1 className='institutionPage-title'>Название учреждения</h1>
@@ -26,6 +29,8 @@ const InstitutionPage = () => {
           <button className='noBtn'><p className='solid btn-text'>Изменить директора</p></button>
         </div>
       </div> v2*/}
+
+
      {/* <div className="institutionPage_header">
         <div className="row space-between">
           <h1 className='institutionPage-title'>Название учреждения</h1>
@@ -40,6 +45,8 @@ const InstitutionPage = () => {
       </div> v1*/}
       <InstitutionLeader/>
       <InstitutionInfo/>
+      <ReviewsPhoto/>
+
     </div>
   );
 };
