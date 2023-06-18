@@ -3,6 +3,8 @@ import './institutionPage.css'
 import InstitutionLeader from "../../components/institutionLeader/institutionLeader";
 import InstitutionInfo from "../../components/institutionInfo/institutionInfo";
 import ReviewsPhoto from "../../components/ReviewsPhoto/ReviewsPhoto";
+import InstitutionReviews from "../../components/InstitutuionReviews/InstitutionReviews";
+import {NavLink} from "react-router-dom";
 
 const InstitutionPage = () => {
   return (
@@ -43,10 +45,20 @@ const InstitutionPage = () => {
           <button className='noBtn'><p className='solid btn-text'>представитель учреждения?</p></button>
         </div>
       </div> v1*/}
+
+
+
       <InstitutionLeader/>
+
       <InstitutionInfo/>
+
       <ReviewsPhoto/>
 
+      <InstitutionReviews/>
+
+      <NavLink to='/institutionReviews'>
+        <button>Смотреть все</button>
+      </NavLink>
     </div>
   );
 };

@@ -16,8 +16,6 @@ const ReviewsPhoto = () => {
         <ReviewPhoto/>
         <ReviewPhoto/>
         <ReviewPhoto/>
-        <ReviewPhoto/>
-
       </div>
     </div>
   );

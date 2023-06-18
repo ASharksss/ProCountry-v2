@@ -23,6 +23,8 @@ import RecoveryEmailPage from "./pages/formPage/recoveryPassword/recoveryEmailPa
 import RecoveryCodePage from "./pages/formPage/recoveryPassword/recoveryCodePage";
 import RecoveryNewPassword from "./pages/formPage/recoveryPassword/recoveryNewPassword";
 import FormReviewPage from "./pages/formPage/formReviewPage";
+import InstitutionReviews from "./components/InstitutuionReviews/InstitutionReviews";
+import InstitutionReviewsPage from "./pages/InstitutionReviewsPage/InstitutionReviewsPage";
 
 
 function App() {
@@ -35,6 +37,7 @@ function App() {
             <Route path='/institutes' element={<TablePage title={'Школы'}/>}/>
             <Route path='/institutes/institutePage' element={<InstitutePage institute_title={'Название категории'}/>}/>
             <Route path='/institutionPage' element={<InstitutionPage/>}/>
+            <Route path='/institutionReviews' element={<InstitutionReviewsPage/>}/>
 
             <Route path='/subjects' element={<TablePage path={'/subjects/subjectPage'} title={'Дочерние субъекты'}
                                                         subtitle={'Дочерние субъекты выбранной территории'}/>}/>
