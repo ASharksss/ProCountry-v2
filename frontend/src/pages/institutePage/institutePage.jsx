@@ -1,10 +1,17 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import {NavLink} from "react-router-dom";
+import { useDispatch, useSelector } from 'react-redux';
+
 import './institutePage.css'
 import MinisterCard from "../../components/leaderCard/ministerCard";
-import {NavLink} from "react-router-dom";
 import InstituteCard from "../../components/categoryCards/instituteCard";
+import { showPreloader } from '../../logic/slices/otherSlice';
 
 const InstitutePage = ({institute_title}) => {
+  useEffect(() => {
+    showPreloader()
+
+  }, [])
   return (
     <div className='institute_page'>
       <h1 className='institute_title'>{institute_title}</h1>

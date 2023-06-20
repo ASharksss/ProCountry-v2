@@ -3,9 +3,7 @@ import './category_rating.css'
 import {buildStyles, CircularProgressbar} from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
-const CategoryRating = () => {
-  const percentage = 48.35;
-
+const CategoryRating = ({percentage=48.35}) => {
   return (
     <div className='category_rating'>
       <CircularProgressbar

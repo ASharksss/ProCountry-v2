@@ -1,0 +1,31 @@
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-image: linear-gradient(to bottom right, #fff, #343434);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.preloader__spinner {
+    border: 4px solid #000;
+    border-top: 4px solid #fff;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

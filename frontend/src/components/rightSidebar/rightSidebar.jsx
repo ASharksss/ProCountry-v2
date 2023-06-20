@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import user_avatar from './../../asserts/icons/sidebars/user_avatar.png'
 import scroll_down from './../../asserts/icons/sidebars/scroll_down.svg'
 import './rightSidebar.css'
@@ -7,12 +8,13 @@ import {Select} from "../../ui/selects/select";
 
 
 export const RightSidebar = () => {
+  const {user} = useSelector(state => state.user)
   return (
     <div className='right-sidebar'>
       <Search/>
       <div className="user_block">
         <img src={user_avatar} alt="" className="user_img"/>
-        <p>Имя Фамилия</p>
+        <p>{user.items['name']} {user.items['surname']}</p>
         <img src={scroll_down} alt="" className='user_scroll-down'/>
       </div>
       <div className="sidebar_geo-nav">
