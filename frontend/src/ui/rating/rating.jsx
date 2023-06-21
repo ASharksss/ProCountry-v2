@@ -1,12 +1,12 @@
 import React from 'react';
 import './rating.css'
-import rating from '../../asserts/icons/home/rating.svg'
+import ratingImg from '../../asserts/icons/home/rating.svg'
 
-export const Rating = ({size}) => {
+export const Rating = ({size, rating=90}) => {
   return (
     <div className='rating'>
-      <img src={rating} alt="" className={'rating_img ' + size}/>
-      <p className={size}>96.21%</p>
+      <img src={ratingImg} alt="" className={'rating_img ' + size}/>
+      <p className={size}>{parseFloat(rating).toFixed(2)}%</p>
     </div>
   );
 };

@@ -9,28 +9,32 @@ import Map from "../../components/map/map";
 import CategoryCard from "../../components/categoryCards/categoryCard";
 import { Loader } from '../../components/loader/loader';
 import { hidePreloader, showPreloader } from '../../logic/slices/otherSlice';
+import { dataToGroups } from '../../logic/utils';
+import { fetchPartyList } from '../../logic/slices/partsSlice';
 
 export const Home = () => {
   const dispatch = useDispatch()
   const { category } = useSelector(state => state.instCategory)
-  const isLoadingData = category.status === 'loaded'
-  const handleGetCategory = async () => {
-    const response = await dispatch(fetchInstitutionCategory())
+  const { parts } = useSelector(state => state.party)
+
+  const isLoadingCat = category.status === 'loaded'
+  const isLoadingParts = parts.status === 'loaded'
+
+  const handleGetAny = async () => {
+    const responseCat = await dispatch(fetchInstitutionCategory())
+    const responseParts = await dispatch(fetchPartyList())
+    if (responseCat && responseParts) {
+      hidePreloader()
+    }
   }
   useEffect(() => {
     showPreloader()
-    handleGetCategory()
-    hidePreloader()
+    handleGetAny()
   }, [])
-  
-  const groups = category.items.reduce((acc, item, index) => {
-    const groupIndex = Math.floor(index / 3);
-    if (!acc[groupIndex]) {
-      acc[groupIndex] = [];
-    }
-    acc[groupIndex].push(item);
-    return acc;
-  }, []);
+
+  const groups = dataToGroups(category.items)
+  const partsGroups = dataToGroups(parts.items)
+
   return (
     <div className='home'>
       <h1 className='title'>Узнай рейтинг своего города</h1>
@@ -44,15 +48,15 @@ export const Home = () => {
       </div>
       <h1 className='cat_title'>Категории учреждений</h1>
       <div className="categories">
-        {isLoadingData && groups.map((group, index) => (
+        {isLoadingCat && groups.map((group, index) => (
           <div className="category_item" key={index}>
             {group.map((item) => (
-              <NavLink key={item.id} to={'/institutes/institutePage/' + item.id} className='noLink category_card_link'>
+              <NavLink key={item.id} to={'/institutes/subcategory/' + item.id} className='noLink category_card_link'>
                 <CategoryCard text={item.name} percentage={item.rating} /></NavLink>
             ))}
           </div>
         ))}
-        </div>
+      </div>
 
       <h1 className='cat_title'>Дочерние субъекты</h1>
       <div className="daughterSubjects">
@@ -71,17 +75,13 @@ export const Home = () => {
 
       <h1 className='cat_title'>Партии</h1>
       <div className="daughterSubjects">
-        <div className="category_item">
-          <NavLink to='/parts/partPage' className='noLink category_card_link'><CategoryCard text={'Партия 1'} /></NavLink>
-          <NavLink to='/parts/partPage' className='noLink category_card_link'><CategoryCard text={'Партия 2'} /></NavLink>
-          <NavLink to='/parts/partPage' className='noLink category_card_link'><CategoryCard text={'Партия 3'} /></NavLink>
-        </div>
-        <div className="category_item">
-          <NavLink to='/parts/partPage' className='noLink category_card_link'><CategoryCard text={'Партия 4'} /></NavLink>
-          <NavLink to='/parts/partPage' className='noLink category_card_link'><CategoryCard text={'Партия 5'} /></NavLink>
-          <NavLink className='noLink category_card_link'><CategoryCard text={'Партия 6'} /></NavLink>
-        </div>
-        <NavLink to='/parts'><button>Смотреть все</button></NavLink>
+        {isLoadingCat && partsGroups.map((group, index) => (
+          <div className="category_item" key={index}>
+            {group.map((item) => (
+              <NavLink to={'/parts/' + item.id} className='noLink category_card_link'><CategoryCard text={item.name} percentage={item.rating} /></NavLink>
+            ))}
+          </div>
+        ))}
       </div>
     </div>
   );

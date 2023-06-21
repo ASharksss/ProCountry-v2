@@ -24,7 +24,7 @@ export const LeftSidebar = () => {
             <img src={home} alt="" className="sidebar_menu-icon"/>
             <p>Главная</p>
           </NavLink>
-          <NavLink to='/parts' className='link sidebar_menu-item'>
+          <NavLink to='/parts' className='link sidebar_menu-item' type='parts'>
             <img src={part} alt="" className="sidebar_menu-icon"/>
             <p>Партии</p>
           </NavLink>

@@ -5,7 +5,7 @@ import {Rating} from "../../ui/rating/rating";
 import {NavLink} from "react-router-dom";
 
 
-const PartPersonCard = () => {
+const PartPersonCard = ({name, position, id, party_id, rating}) => {
   return (
     <div className='partPerson'>
       <div className="partPerson_avatar">
@@ -13,16 +13,14 @@ const PartPersonCard = () => {
       </div>
       <div className="partPerson-info">
         <div className="partPerson-info_name">
-          <h1 className='partPerson_name'>Фамилия Имя Отчетсво</h1>
+          <h1 className='partPerson_name'>{name}</h1>
           <div className="partPerson_rating">
-            <Rating size={'min'} />
+            <Rating size={'min'} rating={rating}/>
           </div>
 
         </div>
-        <p className='partPerson_job'>Мэр города Казани, председатель партии,
-          член Федерального политического комитета,член
-          Бюро партии, руководитель Единого избирательного штаба партии</p>
-        <NavLink to='/parts/partPage/partPerson' className='partPerson_link'>Узнать подробнее</NavLink>
+        <p className='partPerson_job'>{position}</p>
+        <NavLink to={`/parts/${party_id}/${id}`} className='partPerson_link'>Узнать подробнее</NavLink>
       </div>
 
     </div>

@@ -43,18 +43,22 @@ function App() {
     const response = await dispatch(fetchUserByToken(token))
     if (response.payload) {
       axios.defaults.headers.common = { 'Authorization': 'Bearer ' + token }
-      hidePreloader()
+      dispatch(hidePreloader())
     }
   }
 
   useEffect(() => {
-    showPreloader()
+    console.log(isLoading)
+  }, [isLoading])
+
+  useEffect(() => {
+    dispatch(showPreloader())
     const local_token = localStorage.getItem('session')
     if (local_token) {
       const token = JSON.parse(local_token)['token']
       handleCheckUser(token)
     } else {
-      hidePreloader()
+      dispatch(hidePreloader())
     }
   }, [])
 
@@ -68,17 +72,17 @@ function App() {
         <Routes>
           <Route path='/' element={<Layout />}>
             <Route path='/' element={<Home />} />
-            <Route path='/institutes' element={<TablePage title={'Школы'} />} />
-            <Route path='/institutes/institutePage/:id' element={<InstitutePage institute_title={'Название категории'} />} />
-            <Route path='/institutionPage' element={<InstitutionPage />} />
+            <Route path='/institutes/:id' element={<TablePage title={'Школы'} type={'institutes'}/>} />
+            <Route path='/institutes/subcategory/:id' element={<InstitutePage institute_title={'Название категории'} />} />
+            <Route path='/institutes/:iId/:id' element={<InstitutionPage />} />
             <Route path='/institutionReviews' element={<InstitutionReviewsPage />} />
 
             <Route path='/subjects' element={<TablePage path={'/subjects/subjectPage'} title={'Дочерние субъекты'}
               subtitle={'Дочерние субъекты выбранной территории'} />} />
-            <Route path='/parts' element={<TablePage path={'/parts/partPage'} title={'Партии'}
+            <Route path='/parts' element={<TablePage path={'/parts/partPage'} title={'Партии'} type={'parts'}
               subtitle={'Зарегистрированные политические партии выбранной территории'} />} />
-            <Route path='/parts/partPage' element={<PartPage text={'Название Партии'} />} />
-            <Route path='/parts/partPage/partPerson' element={<PartPersonPage text={'Название Партии'} />} />
+            <Route path='/parts/:id' element={<PartPage text={'Название Партии'} />} />
+            <Route path='/parts/:pId/:id' element={<PartPersonPage text={'Название Партии'} />} />
             <Route path='/Subscriptions' element={<SubscriptionsPage />} />
             <Route path='/notifications' element={<Notifications />} />
             <Route path='/MarkerPage' element={<MarkerPage />} />

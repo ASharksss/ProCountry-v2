@@ -36,6 +36,7 @@ export const loginSlice = createSlice({
     extraReducers: {
         [fetchLogin.pending]: (state) => {
             state.user.token = []
+            state.user.items = []
             state.isAuth = false
             state.user.status = 'loading'
         },
@@ -49,11 +50,13 @@ export const loginSlice = createSlice({
         },
         [fetchLogin.rejected]: (state) => {
             state.user.token = []
+            state.user.items = []
             state.isAuth = false
             state.user.status = 'error'
         },
         [fetchUserByToken.pending]: (state) => {
             state.user.token = []
+            state.user.items = []
             state.isAuth = false
             state.user.status = 'loading'
         },
@@ -66,6 +69,7 @@ export const loginSlice = createSlice({
         },
         [fetchUserByToken.rejected]: (state) => {
             state.user.token = []
+            state.user.items = []
             state.isAuth = false
             state.user.status = 'error'
         }

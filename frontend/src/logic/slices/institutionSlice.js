@@ -12,7 +12,17 @@ export const fetchInstitutionCategory = createAsyncThunk('institution/categories
 })
 
 export const fetchInstitutionSubcategory = createAsyncThunk('institution/subcategories', async (id) => {
-    const { data } = await axios.get('/institution/subcategories/' + id)
+    const { data } = await axios.get('/institution/subcategory/' + id)
+        .catch(error => {
+            if (error) {
+                window.alert(error.response.data.detail.message)
+            }
+        })
+    return data
+})
+
+export const fetchInstitutionObjects = createAsyncThunk('institution/subcategory/objects', async (id) => {
+    const { data } = await axios.get('/institution/subcategory/objects/' + id)
         .catch(error => {
             if (error) {
                 window.alert(error.response.data.detail.message)
@@ -31,6 +41,11 @@ const initialState = {
         items: [],
         status: 'loading',
         leader: [],
+        head: []
+    },
+    objects: {
+        items: [],
+        status: 'loading',
         head: []
     }
 }
@@ -55,20 +70,35 @@ export const institutionCategorySllice = createSlice({
             state.subcategory.items = []
             state.subcategory.leader = []
             state.subcategory.head = []
-            state.category.status = 'loading'
+            state.subcategory.status = 'loading'
         },
         [fetchInstitutionSubcategory.fulfilled]: (state, action) => {
             state.subcategory.items = action.payload.subcategories
             state.subcategory.leader = action.payload.leader
             state.subcategory.head = action.payload.head
-            state.category.status = 'loaded'
+            state.subcategory.status = 'loaded'
         },
         [fetchInstitutionSubcategory.rejected]: (state) => {
             state.subcategory.items = []
             state.subcategory.leader = []
             state.subcategory.head = []
-            state.category.status = 'error'
-        }
+            state.subcategory.status = 'error'
+        },
+        [fetchInstitutionObjects.pending]: (state) => {
+            state.objects.items = []
+            state.objects.head = []
+            state.objects.status = 'loading'
+        },
+        [fetchInstitutionObjects.fulfilled]: (state, action) => {
+            state.objects.items = action.payload.institution
+            state.objects.head = action.payload.head
+            state.objects.status = 'loaded'
+        },
+        [fetchInstitutionObjects.rejected]: (state) => {
+            state.objects.items = []
+            state.objects.head = []
+            state.objects.status = 'error'
+        },
     }
 })
 
