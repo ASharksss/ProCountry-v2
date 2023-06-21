@@ -1,0 +1,75 @@
+.modal {
+    width: 100vw;
+    height: 100vh;
+
+    background: rgba(0, 14, 43, 0.5);;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: .5s;
+    pointer-events: none;
+}
+
+.modal.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal_content {
+    text-align: center;
+    border-radius: 20px;
+    padding: 115px 95px;
+    background-color: white;
+    width: 722px;
+    z-index: 2;
+    transform: scale(0.5);
+    transition: .4s;
+}
+
+.modal_content.active{
+    transform: scale(1);
+}
+
+.modal_title {
+    font-family: Montserrat-SemiBold;
+    font-size: 35px;
+    color: #08092B;
+    margin-bottom: 40px;
+}
+
+.modal_subtitle {
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 6px;
+}
+
+.modal_textarea {
+    padding: 20px 30px;
+    width: 522px;
+    height: 287px;
+    background: #F3F7FF;
+    border-radius: 10px;
+    font-size: 12px;
+    border: 1px solid #D8D8D8
+}
+
+.modal_select {
+    padding: 20px 30px;
+    width: 532px;
+    height: 55px;
+    background: #F3F7FF;
+    border: 1px solid #D8D8D8;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.modal_subtitleDelete {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 6px;
+}

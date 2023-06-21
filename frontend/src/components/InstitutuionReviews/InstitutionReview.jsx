@@ -1,15 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import user_avatar from "../../asserts/icons/sidebars/user_avatar.png";
 import like from "../../asserts/Like.svg"
 import dislike from "../../asserts/dislike.svg"
 import marker from "../../asserts/marker.svg"
-import instituteAvatar from "../../asserts/institute_avatar.svg"
-import clip from "../../asserts/clip.svg"
 import {Rating} from "../../ui/rating/rating";
 import InstitutionReviewPhoto from "./institutionReview_photo";
 import InstitutionReviewAnswer from "./InstitutionReviewAnswer";
+import InputReviewAnswers from "../../ui/input/inputReviewAnswers";
+import ModalMain from "../Modal/modalMain";
+import ModalComplaint from "../Modal/modalComplaint";
 
 const InstitutionReview = () => {
+
+	const [activeModal, setActiveModal] = useState(false)
+
 	return (
 		<div className='institutionReview'>
 			<div className="markerCard_body">
@@ -46,7 +50,7 @@ const InstitutionReview = () => {
 				<p className='reaction_count'>0</p>
 				<img src={marker} alt=""/>
 				<button className='noBtn institutionReview_btn opacity'>Ответить(0)</button>
-				<button className='noBtn institutionReview_btn opacity'>Пожаловаться</button>
+				<button className='noBtn institutionReview_btn opacity' onClick={() => setActiveModal(true)}>Пожаловаться</button>
 			</div>
 
 			<div className="institutionReviewAnswers">
@@ -54,18 +58,11 @@ const InstitutionReview = () => {
 				<InstitutionReviewAnswer/>
 			</div>
 
-			<div className="institutionReviewAnswers-input row">
-				<div className="institutionReviewAnswers_input-block row">
-					<img src={instituteAvatar} alt=""/>
-					<input className='institutionReviewAnswers_input' type="text" placeholder='Написать комментарий...'/>
-					<button className='noBtn'>
-						<img src={clip} alt=""/>
-					</button>
-				</div>
-				<button>Ответить</button>
-			</div>
+			<InputReviewAnswers/>
 
 			<hr className='opacity mt-35px mb-25px'/>
+
+			<ModalMain active={activeModal} setActive={setActiveModal} children={<ModalComplaint/>}/>
 		</div>
 	);
 };

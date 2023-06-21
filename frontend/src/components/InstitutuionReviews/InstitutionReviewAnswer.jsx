@@ -1,11 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import user_avatar from "../../asserts/icons/sidebars/user_avatar.png";
 import {Rating} from "../../ui/rating/rating";
 import like from "../../asserts/Like.svg";
 import dislike from "../../asserts/dislike.svg";
 import marker from "../../asserts/marker.svg";
+import SupportModal from "../Modal/supportModal";
+import ModalMain from "../Modal/modalMain";
 
 const InstitutionReviewAnswer = () => {
+
+	const [activeModal, setActiveModal] = useState(false)
+
 	return (
 		<div className='institutionReviewAnswer'>
 			<hr className='opacity mt-35px mb-25px'/>
@@ -28,8 +33,9 @@ const InstitutionReviewAnswer = () => {
 				<p className='reaction_count'>0</p>
 				<img src={marker} alt=""/>
 				<button className='noBtn institutionReview_btn opacity'>Ответить(0)</button>
-				<button className='noBtn institutionReview_btn opacity'>Пожаловаться</button>
+				<button className='noBtn institutionReview_btn opacity' onClick={() => setActiveModal(true)}>Пожаловаться</button>
 			</div>
+			<ModalMain active={activeModal} setActive={setActiveModal} children={<SupportModal/>}/>
 		</div>
 	);
 };

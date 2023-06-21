@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './leftSidebar.css'
 
 import logo from '../../asserts/icons/sidebars/logo.svg'
@@ -11,8 +11,11 @@ import heart from '../../asserts/icons/sidebars/heart.svg'
 import support from '../../asserts/icons/sidebars/support.svg'
 
 import {NavLink} from 'react-router-dom'
+import ModalMain from "../Modal/modalMain";
 
 export const LeftSidebar = () => {
+
+
   return (
     <div className='left-sidebar'>
       <div className="sidebar_content">
@@ -50,6 +53,7 @@ export const LeftSidebar = () => {
           </NavLink>
         </div>
       </div>
+
     </div>
   )
 };

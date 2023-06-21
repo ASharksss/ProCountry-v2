@@ -1,8 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import user_avatar from "../../asserts/icons/user_avatar.png";
 import InputRequired from "../../ui/input/inputRequired";
+import SupportModal from "../Modal/supportModal";
+import ModalMain from "../Modal/modalMain";
+import ModalDeleteProfile from "../Modal/modalDeleteProfile";
 
 const ProfileCardEdit = () => {
+
+  const [activeModal, setActiveModal] = useState(true)
+
   return (
     <>
       <div className='profileCardEdit'>
@@ -31,8 +37,9 @@ const ProfileCardEdit = () => {
       </div>
       <div className="profileCardEdit_buttons row flex jstfy-center">
         <button className='profileCardEdit_button'>Сохранить</button>
-        <button className='profileCardEdit_button'>Удалить профиль</button>
+        <button className='profileCardEdit_button' onClick={() => setActiveModal(true)}>Удалить профиль</button>
       </div>
+      <ModalMain active={activeModal} setActive={setActiveModal} children={<ModalDeleteProfile/>}/>
     </>
   );
 };

@@ -17,7 +17,7 @@ const MyProfilePage = () => {
       </div>
 
       <ProfileCard/>
-      {/*<ProfileCardEdit/>*/}
+      <ProfileCardEdit/>
       <ProfileReviewBlock/>
       <NavLink to='/allReview' className='allReview'>
         <button>Смотреть все</button>
