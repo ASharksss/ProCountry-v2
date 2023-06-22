@@ -3,7 +3,7 @@ import './institutionInfo.css'
 import SliderShow from "../slider/slider";
 import answer from "../../asserts/icons/answer.svg";
 
-const InstitutionInfo = () => {
+const InstitutionInfo = ({full_name, address, telNumber, email, leader}) => {
 	return (
 		<div className='institutionInfo row'>
 			<div className="institutionInfo__slider">
@@ -13,22 +13,22 @@ const InstitutionInfo = () => {
 
 				<div className="row mb-25px space-between">
 					<p className='institutionLeader_education-item'>Полное название:</p>
-					<p className='institutionLeader_education-info'>Муниципальное бюджетное общеобразовательное учреждение “Средняя общеобразовательная школа №21</p>
+					<p className='institutionLeader_education-info'>{full_name}</p>
 				</div>
 
 				<div className="row mb-25px space-between">
 					<p className='institutionLeader_education-item'>Адрес:</p>
-					<p className='institutionLeader_education-info'>420139, г. Казань, ул. Ю.Фучика, д. 26</p>
+					<p className='institutionLeader_education-info'>{address}</p>
 				</div>
 
 				<div className="row mb-25px space-between">
 					<p className='institutionLeader_education-item'>Телефон:</p>
-					<p className='institutionLeader_education-info'>+7(843)-268-08-77</p>
+					<p className='institutionLeader_education-info'>{telNumber}</p>
 				</div>
 
 				<div className="row mb-25px space-between">
 					<p className='institutionLeader_education-item'>Почта:</p>
-					<p className='institutionLeader_education-info'>gymn06@yandex.ru, G6.kzn@tatar.ru</p>
+					<p className='institutionLeader_education-info'>{email}</p>
 				</div>
 
 				<div className="row mb-25px space-between">
@@ -41,7 +41,7 @@ const InstitutionInfo = () => {
 
 				<div className="row mb-25px space-between">
 					<p className='institutionLeader_education-item'>Руководитель:</p>
-					<p className='institutionLeader_education-info'>Баклашова Ольга Николаевна</p>
+					<p className='institutionLeader_education-info'>{leader}</p>
 				</div>
 			</div>
 		</div>

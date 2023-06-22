@@ -5,7 +5,7 @@ import {NavLink} from "react-router-dom";
 
 export const Part = ({name, party_id}) => {
   return (
-    <NavLink to={'/parts/partPage/' + party_id} className='part noLink'>
+    <NavLink to={'/parts/' + party_id} className='part noLink'>
       <img src={part_icon} alt="Название партии" className='part_img'/>
       <p>{name}</p>
     </NavLink>

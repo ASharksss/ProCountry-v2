@@ -21,12 +21,26 @@ export const fetchPartyMembers = createAsyncThunk('party/members', async (id) =>
     return data
 })
 
+export const fetchMemberInfo = createAsyncThunk('party/member/info', async (id) => {
+    const { data } = await axios.get('/party/member/' + id)
+        .catch(error => {
+            if (error) {
+                window.alert(error.response.data.detail.message)
+            }
+        })
+    return data
+})
+
 const initialState = {
     parts: {
         items: [],
         status: 'loading'
     },
     partyMembers: {
+        items: [],
+        status: 'loading'
+    },
+    memberInfo: {
         items: [],
         status: 'loading'
     }
@@ -59,6 +73,18 @@ export const partySlice = createSlice({
         [fetchPartyMembers.rejected]: (state) => {
             state.partyMembers.items = []
             state.partyMembers.status = 'error'
+        },
+        [fetchMemberInfo.pending]: (state) => {
+            state.memberInfo.items = []
+            state.memberInfo.status = 'loading'
+        },
+        [fetchMemberInfo.fulfilled]: (state, action) => {
+            state.memberInfo.items = action.payload
+            state.memberInfo.status = 'loaded'
+        },
+        [fetchMemberInfo.rejected]: (state) => {
+            state.memberInfo.items = []
+            state.memberInfo.status = 'error'
         },
     }
 })

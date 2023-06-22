@@ -31,6 +31,16 @@ export const fetchInstitutionObjects = createAsyncThunk('institution/subcategory
     return data
 })
 
+export const fetchInstitutionObjectInfo = createAsyncThunk('institution/object', async (id) => {
+    const { data } = await axios.get('/institution/object/' + id)
+        .catch(error => {
+            if (error) {
+                window.alert(error.response.data.detail.message)
+            }
+        })
+    return data
+})
+
 
 const initialState = {
     category: {
@@ -47,6 +57,10 @@ const initialState = {
         items: [],
         status: 'loading',
         head: []
+    },
+    objectInfo: {
+        items: [],
+        status: 'loading'
     }
 }
 
@@ -98,6 +112,18 @@ export const institutionCategorySllice = createSlice({
             state.objects.items = []
             state.objects.head = []
             state.objects.status = 'error'
+        },
+        [fetchInstitutionObjectInfo.pending]: (state) => {
+            state.objectInfo.items = []
+            state.objectInfo.status = 'loading'
+        },
+        [fetchInstitutionObjectInfo.fulfilled]: (state, action) => {
+            state.objectInfo.items = action.payload
+            state.objectInfo.status = 'loaded'
+        },
+        [fetchInstitutionObjectInfo.rejected]: (state) => {
+            state.objectInfo.items = []
+            state.objectInfo.status = 'error'
         },
     }
 })

@@ -5,18 +5,18 @@ import answer from '../../asserts/icons/answer.svg'
 import {Part} from "../../ui/part/part";
 import {Rating} from "../../ui/rating/rating";
 
-const InstitutionLeader = () => {
+const InstitutionLeader = ({leader, leaderInfo}) => {
   return (
     <div className='institutionLeader card'>
        <div className="institutionLeader_info row">
          <img src={avatar} className='institutionLeader_info_img' alt=""/>
          <div className="institutionLeader_info-top">
            <div className="row items-center space-between">
-             <h1 className='solid info_title'>Имя Фамилия Отчество</h1>
-             <Rating size={'min'}/>
+             <h1 className='solid info_title'>{leader.name}</h1>
+             <Rating size={'min'} rating={leader.rating} />
            </div>
-           <h2 className='info_job'>Директор школы</h2>
-           <Part/>
+           <h2 className='info_job'>{leader.position}</h2>
+           <Part name={leader.party} party_id={leader.party_id} />
          </div>
        </div>
 
@@ -24,46 +24,42 @@ const InstitutionLeader = () => {
         <h2 className='institutionLeader_education-title'>Образование</h2>
         <div className="row mb-25px space-between">
           <p className='institutionLeader_education-item'>Уровень профессионального образования:</p>
-          <p className='institutionLeader_education-info'>высшее</p>
+          <p className='institutionLeader_education-info'>{leaderInfo.study_lvl}</p>
         </div>
         <div className="row mb-25px space-between">
           <p className='institutionLeader_education-item'>Обучающая организация:</p>
-          <p className='institutionLeader_education-info'>ГАОУ ДПО “Институт развития образования Республики Татарстан</p>
+          <p className='institutionLeader_education-info'>{leaderInfo.learning_organization}</p>
         </div>
         <div className="row mb-25px space-between">
           <p className='institutionLeader_education-item'>Специализация (по диплому):</p>
-          <p className='institutionLeader_education-info'>французский и немецкий языки</p>
+          <p className='institutionLeader_education-info'>{leaderInfo.specialization_by_diploma}</p>
         </div>
         <div className="row mb-25px space-between">
           <p className='institutionLeader_education-item'>Год завершения обучения:</p>
           <p className='institutionLeader_education-info'>
-            данные не предоставлены
+            {leaderInfo.study_end_date}
             <img className='icon_answer' src={answer} alt=""/>
           </p>
         </div>
         <div className="row mb-25px space-between">
           <p className='institutionLeader_education-item'>Курсы:</p>
           <p className='institutionLeader_education-info'>
-            данные не предоставлены
+            {leaderInfo.courses}
             <img className='icon_answer' src={answer} alt=""/>
           </p>
         </div>
         <div className="row mb-25px space-between">
           <p className='institutionLeader_education-item'>Профессиональная переподготовка по направлению:</p>
-          <p className='institutionLeader_education-info'>менеджмент в образовании</p>
+          <p className='institutionLeader_education-info'>{leaderInfo.retraining}</p>
         </div>
       </div>
 
       <div className="institutionLeader_awards">
         <h2 className='institutionLeader_education-title'>Награды</h2>
         <div className="institutionLeader_awards-list">
-          <p className='institutionLeader_award-item'>1996г. - Нагрудный знак "Отличник народного просвещения".</p>
-          <p className='institutionLeader_award-item'>1996г. - Нагрудный знак "Отличник народного просвещения".</p>
-          <p className='institutionLeader_award-item'>1996г. - Нагрудный знак "Отличник народного просвещения".</p>
-          <p className='institutionLeader_award-item'>1996г. - Нагрудный знак "Отличник народного просвещения".</p>
-          <p className='institutionLeader_award-item'>1996г. - Нагрудный знак "Отличник народного просвещения".</p>
-          <p className='institutionLeader_award-item'>1996г. - Нагрудный знак "Отличник народного просвещения".</p>
-          <p className='institutionLeader_award-item'>1996г. - Нагрудный знак "Отличник народного просвещения".</p>
+          {JSON.parse(leaderInfo.awards).map((item, index) => (
+            <p className='institutionLeader_award-item' key={index}>{item}</p>
+          ))}
         </div>
       </div>
 
