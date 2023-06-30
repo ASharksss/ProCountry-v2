@@ -9,6 +9,7 @@ import ReviewsPhoto from "../../components/ReviewsPhoto/ReviewsPhoto";
 import InstitutionReviews from "../../components/InstitutuionReviews/InstitutionReviews";
 import { hidePreloader, showPreloader } from '../../logic/slices/otherSlice';
 import { fetchInstitutionObjectInfo } from '../../logic/slices/institutionSlice';
+import { fetchUserSubscribe } from '../../logic/slices/userInfoSlice';
 
 const InstitutionPage = () => {
   const dispatch = useDispatch()
@@ -24,6 +25,14 @@ const InstitutionPage = () => {
     }
   }
 
+  const getSubscribe = async () => {
+    const id = window.location.pathname.split('/')[3]
+    const response = await dispatch(fetchUserSubscribe(id))
+    if (response) {
+      hidePreloader()
+    }
+  }
+
   useEffect(() => {
     showPreloader()
     getObjectInfo()
@@ -33,12 +42,16 @@ const InstitutionPage = () => {
     <div className='institutionPage'>
       <div className="institutionPage_header">
         <div className="row space-between">
-          <h1 className='institutionPage-title'>Название учреждения</h1>
+          <h1 className='institutionPage-title'>{objectInfo.items.name}</h1>
+          <button onClick={() => getSubscribe()} style={{border: 'none', backgroundColor: 'transparent', fontSize: '1.25 rem'}}>&#128276;</button>
           <button>Редактировать</button>
         </div>
         <div className="row space-between">
           <div className="bread_crumb">
-            тут хлебные крошки
+            {isLoading && <>
+              <NavLink style={{ textDecoration: 'none', color: 'black' }} to={'/institutes/subcategory/' + objectInfo.items.category.id}>{objectInfo.items.category.name}</NavLink> / <NavLink
+                style={{ textDecoration: 'none', color: 'black' }} to={'/institutes/' + objectInfo.items.subcategory.id}>{objectInfo.items.subcategory.name}</NavLink>
+            </>}
           </div>
         </div>
       </div>

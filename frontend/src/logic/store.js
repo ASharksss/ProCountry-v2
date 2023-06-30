@@ -5,6 +5,7 @@ import { institutionCategoryReducer } from './slices/institutionSlice'
 import { preloaderReducer} from './slices/otherSlice'
 import { partyReducer } from './slices/partsSlice'
 import { geopositionReducer } from './slices/geopositionSlice'
+import { userInfoReducer } from './slices/userInfoSlice'
 
 
 export const store = configureStore({
@@ -13,6 +14,7 @@ export const store = configureStore({
         instCategory: institutionCategoryReducer,
         preloader: preloaderReducer,
         party: partyReducer,
-        geoposition: geopositionReducer
+        geoposition: geopositionReducer,
+        userInfo: userInfoReducer
     }
 })

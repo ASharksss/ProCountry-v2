@@ -15,7 +15,7 @@ export const fetchUserByToken = createAsyncThunk('authorization/token', async (t
     const { data } = await axios.put('/auth/token', {"token": token})
         .catch(error => {
             if (error) {
-                // localStorage.removeItem('session')
+                localStorage.removeItem('session')
             }
         })
     return data
