@@ -11,19 +11,25 @@ import { Loader } from '../../components/loader/loader';
 import { hidePreloader, showPreloader } from '../../logic/slices/otherSlice';
 import { dataToGroups } from '../../logic/utils';
 import { fetchPartyList } from '../../logic/slices/partsSlice';
+import { fetchDistrict, fetchGeoData } from '../../logic/slices/geopositionSlice';
 
 export const Home = () => {
   const dispatch = useDispatch()
   const { category } = useSelector(state => state.instCategory)
   const { parts } = useSelector(state => state.party)
+  const { areas } = useSelector(state => state.geoposition)
+  const {isLoading} = useSelector(state => state.preloader)
 
   const isLoadingCat = category.status === 'loaded'
   const isLoadingParts = parts.status === 'loaded'
+  const isLoadingAreas = areas.status === 'loaded'
 
   const handleGetAny = async () => {
     const responseCat = await dispatch(fetchInstitutionCategory())
     const responseParts = await dispatch(fetchPartyList())
-    if (responseCat && responseParts) {
+    const responseDistrict = await dispatch(fetchDistrict())
+    const responseGeoData = await dispatch(fetchGeoData())
+    if (responseCat && responseParts && responseDistrict && responseGeoData) {
       hidePreloader()
     }
   }
@@ -34,6 +40,11 @@ export const Home = () => {
 
   const groups = dataToGroups(category.items)
   const partsGroups = dataToGroups(parts.items)
+  const areasGroups = dataToGroups(areas.items)
+
+  if (isLoading) {
+    return <Loader />
+  }
 
   return (
     <div className='home'>
@@ -60,22 +71,18 @@ export const Home = () => {
 
       <h1 className='cat_title'>Дочерние субъекты</h1>
       <div className="daughterSubjects">
-        <div className="category_item">
-          <NavLink to='/' className='noLink category_card_link'><CategoryCard text={'Район 1'} /></NavLink>
-          <NavLink to='/' className='noLink category_card_link'><CategoryCard text={'Район 2'} /></NavLink>
-          <NavLink to='/' className='noLink category_card_link'><CategoryCard text={'Район 3'} /></NavLink>
-        </div>
-        <div className="category_item">
-          <NavLink to='/' className='noLink category_card_link'><CategoryCard text={'Район 4'} /></NavLink>
-          <NavLink to='/' className='noLink category_card_link'><CategoryCard text={'Район 5'} /></NavLink>
-          <NavLink to='/' className='noLink category_card_link'><CategoryCard text={'Район 6'} /></NavLink>
-        </div>
-        <NavLink to='/subjects'><button>Смотреть все</button></NavLink>
+        {isLoadingAreas && areasGroups.map((group, index) => (
+          <div className="category_item" key={index}>
+            {group.map((item) => (
+              <NavLink to='/' className='noLink category_card_link' key={item.id}><CategoryCard text={item.name} percentage={item.rating} /></NavLink>
+            ))}
+          </div>
+        ))}
       </div>
 
       <h1 className='cat_title'>Партии</h1>
       <div className="daughterSubjects">
-        {isLoadingCat && partsGroups.map((group, index) => (
+        {isLoadingParts && partsGroups.map((group, index) => (
           <div className="category_item" key={index}>
             {group.map((item) => (
               <NavLink to={'/parts/' + item.id} className='noLink category_card_link'><CategoryCard text={item.name} percentage={item.rating} /></NavLink>

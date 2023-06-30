@@ -48,10 +48,6 @@ function App() {
   }
 
   useEffect(() => {
-    console.log(isLoading)
-  }, [isLoading])
-
-  useEffect(() => {
     dispatch(showPreloader())
     const local_token = localStorage.getItem('session')
     if (local_token) {
